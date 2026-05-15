@@ -44,4 +44,10 @@ interface WordDao {
 
     @Query("UPDATE words SET isSaved = 0 WHERE word = :word")
     suspend fun unsaveWord(word: String)
+
+    @Query("SELECT * FROM words WHERE isSaved = 1")
+    fun getSavedWords(): Flow<List<WordEntity>>
+
+    @Query("SELECT EXISTS(SELECT 1 FROM words WHERE word = :word AND isSaved = 1)")
+    suspend fun isWordSaved(word: String): Boolean
 }
