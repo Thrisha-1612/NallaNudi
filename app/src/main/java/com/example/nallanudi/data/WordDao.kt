@@ -42,6 +42,9 @@ interface WordDao {
     @Query("UPDATE words SET isSaved = 1 WHERE word = :word")
     suspend fun saveWord(word: String)
 
+    @Query("SELECT * FROM words")
+    suspend fun getAllWords(): List<WordEntity>
+
     @Query("UPDATE words SET isSaved = 0 WHERE word = :word")
     suspend fun unsaveWord(word: String)
 }
