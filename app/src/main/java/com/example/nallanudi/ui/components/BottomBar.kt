@@ -1,0 +1,84 @@
+package com.example.nallanudi.ui.components
+
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Book
+import androidx.compose.material.icons.filled.BookmarkBorder
+import androidx.compose.material.icons.filled.Category
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material3.Icon
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.currentBackStackEntryAsState
+
+data class BottomNavItem(
+    val route: String,
+    val title: String,
+    val icon: ImageVector
+)
+
+@Composable
+fun BottomBar(navController: NavHostController) {
+
+    val items = listOf(
+
+        BottomNavItem(
+            route = "home",
+            title = "Home",
+            icon = Icons.Default.Home
+        ),
+
+        BottomNavItem(
+            route = "categories_main",
+            title = "Categories",
+            icon = Icons.Default.Category
+        ),
+        BottomNavItem(
+            route = "saved_words",
+            title = "My List",
+            icon = Icons.Default.BookmarkBorder
+        ),
+
+        BottomNavItem(
+            route = "flashcards",
+            title = "Flashcards",
+            icon = Icons.Default.Book
+        ),
+
+    )
+
+    val navBackStackEntry =
+        navController.currentBackStackEntryAsState()
+
+    val currentRoute =
+        navBackStackEntry.value?.destination?.route
+
+    NavigationBar {
+
+        items.forEach { item ->
+
+            NavigationBarItem(
+                selected = currentRoute == item.route,
+
+                onClick = {
+                    navController.navigate(item.route)
+                },
+
+                icon = {
+                    Icon(
+                        imageVector = item.icon,
+                        contentDescription = item.title
+                    )
+                },
+
+                label = {
+                    Text(text = item.title)
+                }
+            )
+        }
+    }
+}

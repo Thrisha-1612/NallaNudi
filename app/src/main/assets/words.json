@@ -1,0 +1,152 @@
+[
+  {
+    "word": "Photosynthesis",
+    "meaning": "Process by which plants make food using sunlight",
+    "kannadaMeaning": "ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆ",
+    "category": "Science"
+  },
+  {
+    "word": "Atom",
+    "meaning": "Smallest unit of matter",
+    "kannadaMeaning": "ಅಣು",
+    "category": "Science"
+  },
+  {
+    "word": "Cell",
+    "meaning": "Basic structural unit of life",
+    "kannadaMeaning": "ಕೋಶ",
+    "category": "Biology"
+  },
+  {
+    "word": "Molecule",
+    "meaning": "Group of atoms bonded together",
+    "kannadaMeaning": "ಅಣುಗುಂಪು",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Gravity",
+    "meaning": "Force that attracts objects toward Earth",
+    "kannadaMeaning": "ಗುರುತ್ವಾಕರ್ಷಣೆ",
+    "category": "Physics"
+  },
+  {
+    "word": "Velocity",
+    "meaning": "Speed in a specific direction",
+    "kannadaMeaning": "ವೇಗ",
+    "category": "Physics"
+  },
+  {
+    "word": "Acceleration",
+    "meaning": "Rate of change of velocity",
+    "kannadaMeaning": "ತ್ವರಣೆ",
+    "category": "Physics"
+  },
+  {
+    "word": "Force",
+    "meaning": "Push or pull acting on an object",
+    "kannadaMeaning": "ಬಲ",
+    "category": "Physics"
+  },
+  {
+    "word": "Energy",
+    "meaning": "Capacity to do work",
+    "kannadaMeaning": "ಶಕ್ತಿ",
+    "category": "Science"
+  },
+  {
+    "word": "Trigonometry",
+    "meaning": "Study of relationships between triangle sides and angles",
+    "kannadaMeaning": "ತ್ರಿಕೋಣಮಿತಿ",
+    "category": "Math"
+  },
+  {
+    "word": "Equation",
+    "meaning": "Mathematical statement with equals sign",
+    "kannadaMeaning": "ಸಮೀಕರಣ",
+    "category": "Math"
+  },
+  {
+    "word": "Algebra",
+    "meaning": "Branch of mathematics using symbols and variables",
+    "kannadaMeaning": "ಬೀಜಗಣಿತ",
+    "category": "Math"
+  },
+  {
+    "word": "Geometry",
+    "meaning": "Study of shapes and sizes",
+    "kannadaMeaning": "ಜ್ಯಾಮಿತಿ",
+    "category": "Math"
+  },
+  {
+    "word": "Fraction",
+    "meaning": "Part of a whole",
+    "kannadaMeaning": "ಭಿನ್ನರಾಶಿ",
+    "category": "Math"
+  },
+  {
+    "word": "Demand",
+    "meaning": "Desire for a product or service",
+    "kannadaMeaning": "ಬೇಡಿಕೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Supply",
+    "meaning": "Availability of products in the market",
+    "kannadaMeaning": "ಪೂರೈಕೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Profit",
+    "meaning": "Financial gain after expenses",
+    "kannadaMeaning": "ಲಾಭ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Budget",
+    "meaning": "Plan for managing money",
+    "kannadaMeaning": "ಬಜೆಟ್",
+    "category": "Commerce"
+  },
+  {
+    "word": "Investment",
+    "meaning": "Putting money into something for future gain",
+    "kannadaMeaning": "ಹೂಡಿಕೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Reaction",
+    "meaning": "Chemical process where substances change",
+    "kannadaMeaning": "ಪ್ರತಿಕ್ರಿಯೆ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Acid",
+    "meaning": "Substance with sour properties",
+    "kannadaMeaning": "ಅಮ್ಲ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Base",
+    "meaning": "Substance that neutralizes acids",
+    "kannadaMeaning": "ಕ್ಷಾರ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Evolution",
+    "meaning": "Process of gradual development of organisms",
+    "kannadaMeaning": "ವಿಕಾಸ",
+    "category": "Biology"
+  },
+  {
+    "word": "Respiration",
+    "meaning": "Process of releasing energy from food",
+    "kannadaMeaning": "ಉಸಿರಾಟ",
+    "category": "Biology"
+  },
+  {
+    "word": "Ecosystem",
+    "meaning": "Community of living organisms and environment",
+    "kannadaMeaning": "ಪರಿಸರ ವ್ಯವಸ್ಥೆ",
+    "category": "Biology"
+  }
+]
