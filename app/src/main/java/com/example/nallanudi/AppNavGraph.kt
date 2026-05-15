@@ -53,6 +53,13 @@ fun AppNavGraph(navController: NavHostController) {
                     navController = navController
                 )
             }
+            composable("saved_words") {
+                SavedWordsScreen(navController)
+            }
+
+            composable("flashcards") {
+                FlashcardScreen(navController)
+            }
 
             composable(
                 route = "search/{query}",

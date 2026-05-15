@@ -117,42 +117,32 @@ fun CategoryScreen(
 
             } else {
 
-                LazyColumn(
-                    modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(12.dp)
-                ) {
+                LazyColumn {
 
                     items(words) { word ->
 
                         Card(
                             modifier = Modifier
                                 .fillMaxWidth()
+                                .padding(vertical = 6.dp)
                                 .clickable {
                                     navController.navigate("word_detail/${word.word}")
-                                },
-                            shape = RoundedCornerShape(16.dp),
-                            colors = CardDefaults.cardColors(
-                                containerColor = Color.White
-                            ),
-                            elevation = CardDefaults.cardElevation(2.dp)
+                                }
                         ) {
 
-                            Column(modifier = Modifier.padding(16.dp)) {
+                            Column(
+                                modifier = Modifier.padding(16.dp)
+                            ) {
 
                                 Text(
                                     text = word.word,
-                                    fontSize = 18.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = green
+                                    style = MaterialTheme.typography.titleMedium
                                 )
 
                                 Spacer(modifier = Modifier.height(4.dp))
 
                                 Text(
-                                    text = word.kannadaMeaning,
-                                    fontSize = 14.sp,
-                                    color = Color(0xFF2E7D32)
+                                    text = word.kannadaMeaning
                                 )
                             }
                         }

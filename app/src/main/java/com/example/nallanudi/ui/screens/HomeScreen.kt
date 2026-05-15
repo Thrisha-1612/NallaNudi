@@ -50,12 +50,12 @@ fun HomeScreen(navController: NavController) {
     val accentYellow = Color(0xFFFFD54F)
 
     val categories = listOf(
-        CategoryItem("Science", Color(0xFFE8F5E9), "🔬"),
-        CategoryItem("Math", Color(0xFFFFF3E0), "📐"),
-        CategoryItem("Commerce", Color(0xFFE3F2FD), "📊"),
-        CategoryItem("Physics", Color(0xFFF3E5F5), "⚛️"),
-        CategoryItem("Chemistry", Color(0xFFE0F2F1), "🧪"),
-        CategoryItem("Biology", Color(0xFFFFF1F1), "🧬")
+        CategoryItem("Science", Color((0xFF37474F)), "🔬"),
+        CategoryItem("Math", Color(0xFF37474F), "📐"),
+        CategoryItem("Commerce", Color(0xFF5B2C6F), "📊"),
+        CategoryItem("Physics", Color(0xFF004D40), "⚛️"),
+        CategoryItem("Chemistry", Color(0xFF1E3A5F), "🧪"),
+        CategoryItem("Biology", Color(0xFF004D40), "🧬")
     )
 
     fun loadSuggestions(query: String) {
