@@ -36,13 +36,8 @@ fun AppNavGraph(navController: NavHostController) {
                 CategoriesMainScreen(navController)
             }
 
-            composable("flashcards") {
-                FlashcardScreen()
-            }
 
-            composable("saved_words") {
-                SavedWordsScreen(navController)
-            }
+
 
             composable(
                 route = "category/{name}",
