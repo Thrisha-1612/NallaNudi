@@ -13,12 +13,9 @@ private val DarkColorScheme = darkColorScheme(
     background = DarkBackground
 )
 
-private val LightColorScheme = lightColorScheme(
-    primary = PrimaryGreen,
-    secondary = SecondaryGreen,
-    tertiary = AccentGold,
-    background = LightBackground
-)
+val PrimaryGreen = Color(0xFF1B5E20)
+val SecondaryGreen = Color(0xFF2E7D32)
+val AccentGold = Color(0xFFFFD54F)
 
 @Composable
 fun NallaNudiTheme(
