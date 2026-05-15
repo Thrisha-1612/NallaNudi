@@ -1,15 +1,10 @@
 package com.example.nallanudi.data
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface WordDao {
-
-    // ---------------- WORDS ----------------
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertWord(word: WordEntity)
@@ -17,52 +12,36 @@ interface WordDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertWords(words: List<WordEntity>)
 
+    @Delete
+    suspend fun deleteWord(word: WordEntity)
+
     @Query("SELECT * FROM words")
-    fun getAllWords(): Flow<List<WordEntity>>
+    fun getAllWordsFlow(): Flow<List<WordEntity>>
 
-    @Query("""
-        SELECT * FROM words
-        WHERE LOWER(word) LIKE LOWER('%' || :query || '%')
-    """)
-    fun searchWords(query: String): Flow<List<WordEntity>>
-
-    @Query("""
-        SELECT * FROM words
-        WHERE word = :word
-        LIMIT 1
-    """)
-    suspend fun getWord(word: String): WordEntity?
-
-    @Query("""
-        SELECT * FROM words
-        WHERE LOWER(category) = LOWER(:category)
-    """)
-    fun getWordsByCategory(category: String): Flow<List<WordEntity>>
+    @Query("SELECT * FROM words")
+    suspend fun getAllWords(): List<WordEntity>
 
     @Query("SELECT COUNT(*) FROM words")
     suspend fun getWordCount(): Int
 
+    @Query("SELECT * FROM words WHERE word LIKE '%' || :query || '%'")
+    suspend fun searchWords(query: String): List<WordEntity>
 
-    // ---------------- SAVED WORDS ----------------
+    @Query("SELECT * FROM words WHERE category = :category")
+    fun getWordsByCategory(category: String): Flow<List<WordEntity>>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveWord(word: SavedWordEntity)
+    @Query("SELECT * FROM words WHERE word = :word LIMIT 1")
+    suspend fun getWord(word: String): WordEntity?
 
-    @Query("SELECT * FROM saved_words")
-    fun getSavedWords(): Flow<List<SavedWordEntity>>
+    @Query("SELECT * FROM words WHERE isSaved = 1")
+    fun getSavedWords(): Flow<List<WordEntity>>
 
-    @Query("DELETE FROM saved_words WHERE word = :word")
-    suspend fun deleteWord(word: String)
+    @Query("SELECT EXISTS(SELECT * FROM words WHERE word = :word AND isSaved = 1)")
+    suspend fun isWordSaved(word: String): Boolean
 
-    @Query("SELECT * FROM saved_words WHERE word = :word LIMIT 1")
-    suspend fun isWordSaved(word: String): SavedWordEntity?
-    @Query("""
-    SELECT * FROM words
-    WHERE LOWER(word) LIKE '%' || LOWER(:query) || '%'
-""")
-    suspend fun searchWordsOnce(query: String): List<WordEntity>
+    @Query("UPDATE words SET isSaved = 1 WHERE word = :word")
+    suspend fun saveWord(word: String)
 
-    @Query("SELECT * FROM saved_words WHERE word = :word LIMIT 1")
-    fun isWordSavedFlow(word: String): Flow<SavedWordEntity?>
-    fun getAllWordsFlow()
+    @Query("UPDATE words SET isSaved = 0 WHERE word = :word")
+    suspend fun unsaveWord(word: String)
 }

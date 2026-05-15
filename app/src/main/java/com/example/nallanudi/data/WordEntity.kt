@@ -6,17 +6,16 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "words")
 data class WordEntity(
 
-
     @PrimaryKey(autoGenerate = true)
-val id: Int = 0,
+    val id: Int = 0,
 
-val word: String,
+    val word: String,
 
-val meaning: String,
+    val meaning: String,
 
-val kannadaMeaning: String,
+    val kannadaMeaning: String,
 
-val category: String
+    val category: String,
 
-
+    val isSaved: Boolean = false
 )

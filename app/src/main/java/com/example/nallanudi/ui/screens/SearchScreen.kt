@@ -6,13 +6,13 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.nallanudi.data.DatabaseInstance
 import com.example.nallanudi.data.WordEntity
+import kotlinx.coroutines.launch
 
 @Composable
 fun SearchScreen(
@@ -21,16 +21,23 @@ fun SearchScreen(
 ) {
 
     val context = LocalContext.current
+    val coroutineScope = rememberCoroutineScope()
+
     val searchQuery = query ?: ""
 
-    val dao = remember {
-        DatabaseInstance.getDatabase(context).wordDao()
+    var results by remember {
+        mutableStateOf<List<WordEntity>>(emptyList())
     }
 
-    // ✅ FIXED: stable Flow collection
-    val results by remember(searchQuery) {
-        dao.searchWords(searchQuery)
-    }.collectAsState(initial = emptyList())
+    LaunchedEffect(searchQuery) {
+
+        coroutineScope.launch {
+
+            val db = DatabaseInstance.getDatabase(context)
+
+            results = db.wordDao().searchWords(searchQuery)
+        }
+    }
 
     Column(
         modifier = Modifier
@@ -43,27 +50,34 @@ fun SearchScreen(
         Spacer(modifier = Modifier.height(12.dp))
 
         if (results.isEmpty()) {
+
             Text("No results found")
-            return
-        }
 
-        LazyColumn {
+        } else {
 
-            items(results) { item: WordEntity ->
+            LazyColumn {
 
-                Card(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(8.dp)
-                        .clickable {
-                            navController.navigate("word_detail/${item.word}")
+                items(results) { item ->
+
+                    Card(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(8.dp)
+                            .clickable {
+                                navController.navigate("word_detail/${item.word}")
+                            }
+                    ) {
+
+                        Column(
+                            modifier = Modifier.padding(16.dp)
+                        ) {
+
+                            Text(text = item.word)
+
+                            Spacer(modifier = Modifier.height(4.dp))
+
+                            Text(text = item.kannadaMeaning)
                         }
-                ) {
-
-                    Column(modifier = Modifier.padding(16.dp)) {
-
-                        Text(text = item.word)
-                        Text(text = item.kannadaMeaning)
                     }
                 }
             }
