@@ -100,12 +100,52 @@ fun FlashCardItem(word: WordEntity) {
 
                 Spacer(modifier = Modifier.height(12.dp))
 
-                Text(
-                    text = word.kannadaMeaning,
-                    style = MaterialTheme.typography.titleMedium,
-                    color = Color.White.copy(alpha = 0.8f)
-                )
+                        Text(
+                            text = word.kannadaMeaning,
+                            fontSize = 26.sp,
+                            color = Color.White.copy(alpha = 0.92f),
+                            fontWeight = FontWeight.SemiBold
+                        )
+
+                        Spacer(modifier = Modifier.height(40.dp))
+
+                        if (showMeaning) {
+
+                            Text(
+                                text = word.meaning,
+                                fontSize = 18.sp,
+                                color = Color.White.copy(alpha = 0.96f),
+                                lineHeight = 28.sp
+                            )
+
+                            Spacer(modifier = Modifier.height(24.dp))
+
+                            Text(
+                                text = word.category,
+                                color = Color.White.copy(alpha = 0.7f),
+                                fontSize = 14.sp
+                            )
+
+                        } else {
+
+                            Text(
+                                text = "Tap card to reveal meaning",
+                                color = Color.White.copy(alpha = 0.75f),
+                                fontSize = 15.sp
+                            )
+                        }
+                    }
+                }
             }
         }
+
+        Spacer(modifier = Modifier.height(28.dp))
+
+        Text(
+            text = "${pagerState.currentPage + 1} / ${savedWords.size}",
+            color = Color(0xFF6B7280),
+            fontSize = 16.sp,
+            fontWeight = FontWeight.Medium
+        )
     }
 }
