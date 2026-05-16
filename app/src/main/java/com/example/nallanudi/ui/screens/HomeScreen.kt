@@ -70,15 +70,15 @@ fun HomeScreen(navController: NavController) {
 
             val db = DatabaseInstance.getDatabase(context)
 
-            val results: List<WordEntity> = withContext(Dispatchers.IO) {
-                db.wordDao().searchWords(query.trim())
-            }
+            db.wordDao()
+                .searchWords(query.trim())
+                .collect { results ->
 
-            suggestions = results.toList()
-            showSuggestions = suggestions.isNotEmpty()
+                    suggestions = results
+                    showSuggestions = results.isNotEmpty()
+                }
         }
     }
-
     Column(
         modifier = Modifier
             .fillMaxSize()

@@ -13,17 +13,17 @@ import com.example.nallanudi.ui.theme.NallaNudiTheme
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import java.io.IOException
 
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContent {
-
             val navController = rememberNavController()
 
             NallaNudiTheme {
@@ -31,25 +31,10 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        lifecycleScope.launch(Dispatchers.IO) {
-
-            val db = DatabaseInstance.getDatabase(applicationContext)
-            val dao = db.wordDao()
-
-            val count = withContext(Dispatchers.IO) {
-                dao.getWordCount()
-            }
-
-            if (count == 0) {
-                val words = loadWordsFromJson(applicationContext)
-
-                if (words.isNotEmpty()) {
-                    dao.insertWords(words)
-                }
-            }
-        }
+        // DB initialization code here
     }
 
+    // 👇 ADD HERE (OUTSIDE onCreate)
     private fun loadWordsFromJson(context: Context): List<WordEntity> {
 
         return try {
@@ -59,10 +44,10 @@ class MainActivity : ComponentActivity() {
                 .bufferedReader()
                 .use { it.readText() }
 
-            val listType = object : TypeToken<List<WordJson>>() {}.type
+            val listType = object : com.google.gson.reflect.TypeToken<List<WordJson>>() {}.type
 
             val jsonList: List<WordJson> =
-                Gson().fromJson(jsonString, listType)
+                com.google.gson.Gson().fromJson(jsonString, listType)
 
             jsonList.map {
                 WordEntity(
@@ -73,9 +58,6 @@ class MainActivity : ComponentActivity() {
                 )
             }
 
-        } catch (e: IOException) {
-            e.printStackTrace()
-            emptyList()
         } catch (e: Exception) {
             e.printStackTrace()
             emptyList()

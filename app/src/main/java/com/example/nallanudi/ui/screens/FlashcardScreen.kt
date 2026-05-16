@@ -1,52 +1,40 @@
 package com.example.nallanudi.ui.screens
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
 import com.example.nallanudi.data.DatabaseInstance
 import com.example.nallanudi.data.WordEntity
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.flow.collectLatest
+
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 
 @Composable
-fun FlashcardScreen(
-    navController: NavController
-) {
+fun FlashcardScreen() {
 
     val context = LocalContext.current
 
-    var savedWords by remember {
-        mutableStateOf<List<WordEntity>>(emptyList())
+    var savedWords by remember { mutableStateOf<List<WordEntity>>(emptyList()) }
+
+    val db = remember {
+        DatabaseInstance.getDatabase(context)
     }
 
-    var currentIndex by remember {
-        mutableStateOf(0)
-    }
-
-    var showMeaning by remember {
-        mutableStateOf(false)
-    }
-
+    // Load saved words
     LaunchedEffect(Unit) {
-
-        val db = DatabaseInstance.getDatabase(context)
-
-        savedWords = withContext(Dispatchers.IO) {
-            db.wordDao().getSavedWords().first()
-        }
+        db.wordDao()
+            .getSavedWords()
+            .collectLatest {
+                savedWords = it
+            }
     }
 
     if (savedWords.isEmpty()) {
@@ -55,22 +43,34 @@ fun FlashcardScreen(
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
         ) {
-
-            Text(
-                text = "No Saved Words",
-                fontSize = 20.sp
-            )
+            Text("No saved words for flashcards")
         }
 
         return
     }
 
-    val currentWord = savedWords[currentIndex]
+    val pagerState = rememberPagerState(
+        initialPage = 0,
+        pageCount = { savedWords.size }
+    )
+
+    HorizontalPager(
+        state = pagerState,
+        modifier = Modifier.fillMaxSize()
+    ) { page ->
+
+        val word = savedWords[page]
+
+        FlashCardItem(word)
+    }
+}
+
+@Composable
+fun FlashCardItem(word: WordEntity) {
 
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF5F5F5))
             .padding(20.dp),
         contentAlignment = Alignment.Center
     ) {
@@ -78,33 +78,9 @@ fun FlashcardScreen(
         Card(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(400.dp)
-                .pointerInput(currentIndex) {
-
-                    detectHorizontalDragGestures { _, dragAmount ->
-
-                        if (dragAmount < -50) {
-
-                            if (currentIndex < savedWords.lastIndex) {
-                                currentIndex++
-                                showMeaning = false
-                            }
-
-                        } else if (dragAmount > 50) {
-
-                            if (currentIndex > 0) {
-                                currentIndex--
-                                showMeaning = false
-                            }
-                        }
-                    }
-                },
-            shape = RoundedCornerShape(24.dp),
+                .height(300.dp),
             colors = CardDefaults.cardColors(
-                containerColor = Color.White
-            ),
-            elevation = CardDefaults.cardElevation(
-                defaultElevation = 8.dp
+                containerColor = Color(0xFF1B5E20)
             )
         ) {
 
@@ -117,67 +93,17 @@ fun FlashcardScreen(
             ) {
 
                 Text(
-                    text = currentWord.category,
-                    color = Color.Gray,
-                    fontSize = 14.sp
+                    text = word.word,
+                    style = MaterialTheme.typography.headlineMedium,
+                    color = Color.White
                 )
 
-                Spacer(modifier = Modifier.height(20.dp))
+                Spacer(modifier = Modifier.height(12.dp))
 
                 Text(
-                    text = currentWord.word,
-                    fontSize = 32.sp,
-                    fontWeight = FontWeight.Bold
-                )
-
-                Spacer(modifier = Modifier.height(24.dp))
-
-                if (showMeaning) {
-
-                    Text(
-                        text = currentWord.kannadaMeaning,
-                        fontSize = 24.sp,
-                        color = Color(0xFF2E7D32)
-                    )
-
-                    Spacer(modifier = Modifier.height(12.dp))
-
-                    Text(
-                        text = currentWord.meaning,
-                        fontSize = 16.sp,
-                        color = Color.DarkGray
-                    )
-                }
-
-                Spacer(modifier = Modifier.height(30.dp))
-
-                Button(
-                    onClick = {
-                        showMeaning = !showMeaning
-                    }
-                ) {
-
-                    Text(
-                        if (showMeaning)
-                            "Hide Meaning"
-                        else
-                            "Show Meaning"
-                    )
-                }
-
-                Spacer(modifier = Modifier.height(20.dp))
-
-                Text(
-                    text = "${currentIndex + 1} / ${savedWords.size}",
-                    color = Color.Gray
-                )
-
-                Spacer(modifier = Modifier.height(8.dp))
-
-                Text(
-                    text = "Swipe left or right",
-                    color = Color.LightGray,
-                    fontSize = 12.sp
+                    text = word.kannadaMeaning,
+                    style = MaterialTheme.typography.titleMedium,
+                    color = Color.White.copy(alpha = 0.8f)
                 )
             }
         }

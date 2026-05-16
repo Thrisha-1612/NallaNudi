@@ -1,317 +1,95 @@
 package com.example.nallanudi.ui.screens
 
-import android.speech.tts.TextToSpeech
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.BookmarkBorder
-import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.nallanudi.data.DatabaseInstance
 import com.example.nallanudi.data.WordEntity
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import java.util.Locale
 
 @Composable
 fun WordDetailScreen(
     navController: NavController,
-    word: String?
+    word: String
 ) {
 
     val context = LocalContext.current
-    val coroutineScope = rememberCoroutineScope()
+    val scope = rememberCoroutineScope()
+
+    val db = remember {
+        DatabaseInstance.getDatabase(context)
+    }
 
     var wordData by remember { mutableStateOf<WordEntity?>(null) }
-    var isLoading by remember { mutableStateOf(true) }
     var isSaved by remember { mutableStateOf(false) }
 
-    var tts by remember { mutableStateOf<TextToSpeech?>(null) }
-
-    val darkGreen = Color(0xFF0B3D2E)
-    val accentYellow = Color(0xFFFFD54F)
-
-    // TTS INIT
-    LaunchedEffect(Unit) {
-
-        tts = TextToSpeech(context) { status ->
-
-            if (status == TextToSpeech.SUCCESS) {
-
-                tts?.language = Locale.US
-            }
-        }
-    }
-
-    DisposableEffect(Unit) {
-
-        onDispose {
-
-            tts?.stop()
-            tts?.shutdown()
-        }
-    }
-
-    // LOAD DATA
+    // Load word from DB
     LaunchedEffect(word) {
+        wordData = db.wordDao().getWord(word)
 
-        if (word.isNullOrBlank()) return@LaunchedEffect
-
-        val db = DatabaseInstance.getDatabase(context)
-
-        wordData = withContext(Dispatchers.IO) {
-
-            db.wordDao().getWord(word)
+        wordData?.let {
+            isSaved = it.isSaved
         }
-
-        isSaved = withContext(Dispatchers.IO) {
-
-            db.wordDao().isWordSaved(word) != null
-        }
-
-        isLoading = false
     }
-
-    if (isLoading) {
-
-        Box(
-            modifier = Modifier.fillMaxSize(),
-            contentAlignment = Alignment.Center
-        ) {
-
-            CircularProgressIndicator(color = darkGreen)
-        }
-
-        return
-    }
-
-    if (wordData == null) {
-
-        Box(
-            modifier = Modifier.fillMaxSize(),
-            contentAlignment = Alignment.Center
-        ) {
-
-            Text("Word not found")
-        }
-
-        return
-    }
-
-    val data = wordData!!
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF8F9FA))
+            .padding(20.dp)
     ) {
 
-        // HEADER
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(darkGreen)
-                .padding(24.dp)
-        ) {
+        wordData?.let { data ->
 
-            Column {
+            Text(
+                text = data.word,
+                style = MaterialTheme.typography.headlineMedium
+            )
 
-                IconButton(
-                    onClick = {
-                        navController.popBackStack()
-                    }
-                ) {
+            Spacer(modifier = Modifier.height(8.dp))
 
-                    Icon(
-                        Icons.AutoMirrored.Filled.ArrowBack,
-                        contentDescription = null,
-                        tint = Color.White
-                    )
-                }
+            Text(
+                text = data.meaning,
+                style = MaterialTheme.typography.bodyLarge
+            )
 
-                Surface(
-                    color = Color(0xFF1B4D3E),
-                    shape = RoundedCornerShape(8.dp)
-                ) {
+            Spacer(modifier = Modifier.height(8.dp))
 
-                    Text(
-                        text = data.category.uppercase(),
-                        color = accentYellow,
-                        fontSize = 10.sp,
-                        fontWeight = FontWeight.Bold,
-                        modifier = Modifier.padding(8.dp)
-                    )
-                }
+            Text(
+                text = data.kannadaMeaning,
+                style = MaterialTheme.typography.bodyMedium,
+                color = Color.Gray
+            )
 
-                Spacer(modifier = Modifier.height(10.dp))
-
-                Text(
-                    text = data.word,
-                    fontSize = 32.sp,
-                    color = Color.White,
-                    fontWeight = FontWeight.Bold
-                )
-
-                Text(
-                    text = data.kannadaMeaning,
-                    fontSize = 22.sp,
-                    color = Color.White.copy(alpha = 0.8f)
-                )
-            }
-        }
-
-        // BUTTONS
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
+            Spacer(modifier = Modifier.height(24.dp))
 
             Button(
                 onClick = {
 
-                    tts?.speak(
-                        data.word,
-                        TextToSpeech.QUEUE_FLUSH,
-                        null,
-                        null
-                    )
-                },
-                modifier = Modifier.weight(1f),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFFE8F5E9)
-                )
-            ) {
-
-                Icon(
-                    Icons.Default.VolumeUp,
-                    null,
-                    tint = Color(0xFF1B5E20)
-                )
-
-                Spacer(modifier = Modifier.width(8.dp))
-
-                Text(
-                    "Listen",
-                    color = Color(0xFF1B5E20)
-                )
-            }
-
-            Button(
-                onClick = {
-
-                    coroutineScope.launch {
-
-                        val db = DatabaseInstance.getDatabase(context)
+                    scope.launch {
 
                         if (isSaved) {
-
-                            db.wordDao().deleteWord(data)
-
+                            db.wordDao().unsaveWord(data.word)
                             isSaved = false
-
                         } else {
-
                             db.wordDao().saveWord(data.word)
-
                             isSaved = true
                         }
                     }
                 },
-                modifier = Modifier.weight(1f),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor =
-                        if (isSaved)
-                            Color(0xFFFF5252)
-                        else
-                            Color(0xFF2E7D32)
+                    containerColor = if (isSaved) Color.Red else Color(0xFF1B5E20)
                 )
             ) {
 
-                Icon(
-                    Icons.Default.BookmarkBorder,
-                    null
-                )
-
-                Spacer(modifier = Modifier.width(8.dp))
-
                 Text(
-                    if (isSaved) "Saved" else "Save"
+                    if (isSaved) "Remove from Saved" else "Save Word"
                 )
             }
         }
-
-        Column(
-            modifier = Modifier.padding(16.dp)
-        ) {
-
-            SectionTitle("SIMPLE EXPLANATION")
-
-            ContentCard(
-                text = data.meaning
-            )
-
-            Spacer(modifier = Modifier.height(20.dp))
-
-            SectionTitle("IN A SENTENCE")
-
-            ContentCard(
-                text = "\"${data.word} is a key concept in ${data.category}.\"",
-                backgroundColor = Color(0xFFFDF7E7)
-            )
-        }
-    }
-}
-
-@Composable
-fun SectionTitle(text: String) {
-
-    Text(
-        text = text,
-        fontSize = 12.sp,
-        fontWeight = FontWeight.Bold,
-        color = Color.Black,
-        letterSpacing = 1.sp,
-        modifier = Modifier.padding(bottom = 8.dp)
-    )
-}
-
-@Composable
-fun ContentCard(
-    text: String,
-    backgroundColor: Color = Color.White
-) {
-
-    Card(
-        modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = backgroundColor
-        ),
-        elevation = CardDefaults.cardElevation(
-            defaultElevation = 0.dp
-        )
-    ) {
-
-        Text(
-            text = text,
-            modifier = Modifier.padding(16.dp),
-            fontSize = 16.sp,
-            lineHeight = 24.sp,
-            color = Color.DarkGray
-        )
     }
 }

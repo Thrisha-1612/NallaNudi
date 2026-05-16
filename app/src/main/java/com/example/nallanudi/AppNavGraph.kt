@@ -58,7 +58,7 @@ fun AppNavGraph(navController: NavHostController) {
             }
 
             composable("flashcards") {
-                FlashcardScreen(navController)
+                FlashcardScreen( )
             }
 
             composable(
@@ -86,7 +86,7 @@ fun AppNavGraph(navController: NavHostController) {
                 )
             ) { backStackEntry ->
 
-                val word = backStackEntry.arguments?.getString("word")
+                val word = backStackEntry.arguments?.getString("word") ?: ""
 
                 WordDetailScreen(
                     navController = navController,
