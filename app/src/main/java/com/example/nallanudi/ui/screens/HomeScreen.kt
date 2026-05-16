@@ -16,6 +16,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -25,9 +26,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.nallanudi.data.DatabaseInstance
 import com.example.nallanudi.data.WordEntity
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 data class CategoryItem(
     val name: String,
@@ -42,25 +41,65 @@ fun HomeScreen(navController: NavController) {
     val coroutineScope = rememberCoroutineScope()
 
     var searchText by remember { mutableStateOf("") }
-    var suggestions by remember { mutableStateOf<List<WordEntity>>(emptyList()) }
-    var showSuggestions by remember { mutableStateOf(false) }
 
-    val darkGreen = Color(0xFF0B3D2E)
+    var suggestions by remember {
+        mutableStateOf<List<WordEntity>>(emptyList())
+    }
+
+    var showSuggestions by remember {
+        mutableStateOf(false)
+    }
+
+    // ✅ NEW WORD OF DAY STATE
+    var wordOfDay by remember {
+        mutableStateOf<WordEntity?>(null)
+    }
+
     val lightYellow = Color(0xFFFDF7E7)
-    val accentYellow = Color(0xFFFFD54F)
 
     val categories = listOf(
-        CategoryItem("Science", Color((0xFF37474F)), "🔬"),
-        CategoryItem("Math", Color(0xFF37474F), "📐"),
-        CategoryItem("Commerce", Color(0xFF5B2C6F), "📊"),
-        CategoryItem("Physics", Color(0xFF004D40), "⚛️"),
-        CategoryItem("Chemistry", Color(0xFF1E3A5F), "🧪"),
-        CategoryItem("Biology", Color(0xFF004D40), "🧬")
+
+        CategoryItem(
+            "Science",
+            Color(0xFF355C7D),
+            "🔬"
+        ),
+
+        CategoryItem(
+            "Math",
+            Color(0xFF6C5B7B),
+            "📐"
+        ),
+
+        CategoryItem(
+            "Commerce",
+            Color(0xFF4E6E58),
+            "📊"
+        ),
+
+        CategoryItem(
+            "Physics",
+            Color(0xFF5C6B73),
+            "⚛️"
+        ),
+
+        CategoryItem(
+            "Chemistry",
+            Color(0xFF7B5E57),
+            "🧪"
+        ),
+
+        CategoryItem(
+            "Biology",
+            Color(0xFF4F6F52),
+            "🧬"
+        )
     )
 
     fun loadSuggestions(query: String) {
 
         if (query.trim().length < 2) {
+
             suggestions = emptyList()
             showSuggestions = false
             return
@@ -72,13 +111,30 @@ fun HomeScreen(navController: NavController) {
 
             db.wordDao()
                 .searchWords(query.trim())
-                .collect { results ->
+                .collect {
 
-                    suggestions = results
-                    showSuggestions = results.isNotEmpty()
+                    suggestions = it
+                    showSuggestions = it.isNotEmpty()
                 }
         }
     }
+
+    // ✅ WORD OF DAY LOADER
+    LaunchedEffect(Unit) {
+
+        val db = DatabaseInstance.getDatabase(context)
+
+        db.wordDao()
+            .getAllWords()
+            .collect { words ->
+
+                if (words.isNotEmpty()) {
+
+                    wordOfDay = words.random()
+                }
+            }
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -105,7 +161,11 @@ fun HomeScreen(navController: NavController) {
                         ),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text("🌿", fontSize = 22.sp)
+
+                    Text(
+                        "🌿",
+                        fontSize = 22.sp
+                    )
                 }
 
                 Spacer(modifier = Modifier.width(12.dp))
@@ -135,11 +195,17 @@ fun HomeScreen(navController: NavController) {
                         shape = CircleShape
                     )
                     .clickable {
+
                         navController.navigate("saved_words")
                     },
+
                 contentAlignment = Alignment.Center
             ) {
-                Text("🎗️", fontSize = 22.sp)
+
+                Text(
+                    "🎗️",
+                    fontSize = 22.sp
+                )
             }
         }
 
@@ -162,9 +228,11 @@ fun HomeScreen(navController: NavController) {
         Box {
 
             OutlinedTextField(
+
                 value = searchText,
 
                 onValueChange = {
+
                     searchText = it
                     loadSuggestions(it)
                 },
@@ -174,6 +242,7 @@ fun HomeScreen(navController: NavController) {
                 },
 
                 leadingIcon = {
+
                     Icon(
                         Icons.Default.Search,
                         contentDescription = null
@@ -189,6 +258,7 @@ fun HomeScreen(navController: NavController) {
                 ),
 
                 keyboardActions = KeyboardActions(
+
                     onSearch = {
 
                         if (searchText.isNotBlank()) {
@@ -196,7 +266,7 @@ fun HomeScreen(navController: NavController) {
                             showSuggestions = false
 
                             navController.navigate(
-                                "word_detail/$searchText"
+                                "search/$searchText"
                             )
                         }
                     }
@@ -220,6 +290,7 @@ fun HomeScreen(navController: NavController) {
                         suggestions.forEach { word ->
 
                             ListItem(
+
                                 headlineContent = {
                                     Text(word.word)
                                 },
@@ -246,44 +317,109 @@ fun HomeScreen(navController: NavController) {
 
         Spacer(modifier = Modifier.height(32.dp))
 
+        // ✅ PREMIUM WORD OF DAY CARD
         Card(
+
             modifier = Modifier
                 .fillMaxWidth()
-                .height(210.dp)
+                .height(230.dp)
                 .clickable {
-                    navController.navigate("word_detail/Photosynthesis")
+
+                    wordOfDay?.let {
+
+                        navController.navigate(
+                            "word_detail/${it.word}"
+                        )
+                    }
                 },
 
-            shape = RoundedCornerShape(32.dp),
+            shape = RoundedCornerShape(36.dp),
 
-            colors = CardDefaults.cardColors(
-                containerColor = darkGreen
+            elevation = CardDefaults.cardElevation(
+                defaultElevation = 10.dp
             )
         ) {
 
-            Column(
+            Box(
+
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(24.dp)
+                    .background(
+
+                        brush = Brush.linearGradient(
+
+                            colors = listOf(
+                                Color(0xFF355C7D),
+                                Color(0xFF4F6F52)
+                            )
+                        )
+                    )
             ) {
 
-                Text(
-                    "WORD OF THE DAY",
-                    color = accentYellow
-                )
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(28.dp)
+                ) {
 
-                Spacer(modifier = Modifier.height(18.dp))
+                    Surface(
+                        color = Color.White.copy(alpha = 0.15f),
+                        shape = RoundedCornerShape(50)
+                    ) {
 
-                Text(
-                    "Photosynthesis",
-                    fontSize = 30.sp,
-                    color = Color.White
-                )
+                        Text(
+                            text = "WORD OF THE DAY",
 
-                Text(
-                    "ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆ",
-                    color = Color.White.copy(alpha = 0.8f)
-                )
+                            modifier = Modifier.padding(
+                                horizontal = 14.dp,
+                                vertical = 6.dp
+                            ),
+
+                            color = Color.White,
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.SemiBold
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(28.dp))
+
+                    Text(
+                        text = wordOfDay?.word
+                            ?: "Photosynthesis",
+
+                        fontSize = 34.sp,
+
+                        color = Color.White,
+
+                        fontWeight = FontWeight.Bold
+                    )
+
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    Text(
+                        text = wordOfDay?.kannadaMeaning
+                            ?: "ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆ",
+
+                        color = Color.White.copy(alpha = 0.92f),
+
+                        fontSize = 24.sp,
+
+                        fontWeight = FontWeight.Medium
+                    )
+
+                    Spacer(modifier = Modifier.weight(1f))
+
+                    Text(
+                        text = wordOfDay?.meaning
+                            ?: "Process by which plants make food",
+
+                        color = Color.White.copy(alpha = 0.82f),
+
+                        lineHeight = 24.sp,
+
+                        fontSize = 15.sp
+                    )
+                }
             }
         }
 
@@ -298,6 +434,7 @@ fun HomeScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(20.dp))
 
         LazyVerticalGrid(
+
             columns = GridCells.Fixed(3),
 
             verticalArrangement = Arrangement.spacedBy(16.dp),
@@ -308,30 +445,51 @@ fun HomeScreen(navController: NavController) {
             items(categories) { item ->
 
                 Card(
+
                     modifier = Modifier
-                        .aspectRatio(0.85f)
+                        .aspectRatio(0.9f)
                         .clickable {
+
                             navController.navigate(
-                                "category/${item.name}"
+                                "category/${item.name.lowercase()}"
                             )
                         },
 
-                    shape = RoundedCornerShape(24.dp)
+                    shape = RoundedCornerShape(26.dp),
+
+                    colors = CardDefaults.cardColors(
+                        containerColor = item.color
+                    ),
+
+                    elevation = CardDefaults.cardElevation(
+                        defaultElevation = 6.dp
+                    )
                 ) {
 
                     Column(
-                        modifier = Modifier.fillMaxSize(),
+
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(14.dp),
 
                         horizontalAlignment = Alignment.CenterHorizontally,
 
                         verticalArrangement = Arrangement.Center
                     ) {
 
-                        Text(item.icon)
+                        Text(
+                            text = item.icon,
+                            fontSize = 34.sp
+                        )
 
-                        Spacer(modifier = Modifier.height(8.dp))
+                        Spacer(modifier = Modifier.height(14.dp))
 
-                        Text(item.name)
+                        Text(
+                            text = item.name,
+                            color = Color.White,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 15.sp
+                        )
                     }
                 }
             }

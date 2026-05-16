@@ -1,40 +1,46 @@
 package com.example.nallanudi.data
 
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface WordDao {
 
-    // 🔹 Insert words (used for JSON load)
+    // 🔹 Insert words from JSON
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertWords(words: List<WordEntity>)
 
-    // 🔹 Get all words (HOME SCREEN)
+    // 🔹 Get all words
     @Query("SELECT * FROM words")
     fun getAllWords(): Flow<List<WordEntity>>
 
-    // 🔹 Get single word (DETAIL SCREEN)
+    // 🔹 Get single word
     @Query("SELECT * FROM words WHERE word = :word LIMIT 1")
     suspend fun getWord(word: String): WordEntity?
 
-    // 🔹 Search words (SEARCH SCREEN)
+    // 🔹 Search words
     @Query("SELECT * FROM words WHERE word LIKE '%' || :query || '%'")
     fun searchWords(query: String): Flow<List<WordEntity>>
 
-    // 🔹 Filter by category (HOME FILTER)
-    @Query("SELECT * FROM words WHERE category = :category")
+    // 🔹 Filter by category
+    @Query("""
+        SELECT * FROM words
+        WHERE TRIM(LOWER(category)) = TRIM(LOWER(:category))
+    """)
     fun getWordsByCategory(category: String): Flow<List<WordEntity>>
 
-    // 🔹 Saved words (FLASHCARDS + SAVED LIST)
+    // 🔹 Saved words
     @Query("SELECT * FROM words WHERE isSaved = 1")
     fun getSavedWords(): Flow<List<WordEntity>>
 
-    // 🔹 SAVE word
+    // 🔹 Save word
     @Query("UPDATE words SET isSaved = 1 WHERE word = :word")
     suspend fun saveWord(word: String)
 
-    // 🔹 UNSAVE word
+    // 🔹 Unsave word
     @Query("UPDATE words SET isSaved = 0 WHERE word = :word")
     suspend fun unsaveWord(word: String)
 }

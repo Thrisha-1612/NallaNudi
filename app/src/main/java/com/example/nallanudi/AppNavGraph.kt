@@ -9,7 +9,6 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-
 import com.example.nallanudi.ui.components.BottomBar
 import com.example.nallanudi.ui.screens.*
 
@@ -17,52 +16,81 @@ import com.example.nallanudi.ui.screens.*
 fun AppNavGraph(navController: NavHostController) {
 
     Scaffold(
+
         bottomBar = {
-            BottomBar(navController)
+
+            // ❌ Hide bottom bar on splash
+            if (
+                navController.currentBackStackEntry
+                    ?.destination
+                    ?.route != "splash"
+            ) {
+
+                BottomBar(navController)
+            }
         }
+
     ) { paddingValues ->
 
         NavHost(
             navController = navController,
-            startDestination = "home",
+
+            // ✅ SPLASH FIRST
+            startDestination = "splash",
+
             modifier = Modifier.padding(paddingValues)
         ) {
 
+            // ✅ SPLASH SCREEN
+            composable("splash") {
+                SplashScreen(navController)
+            }
+
+            // ✅ HOME
             composable("home") {
                 HomeScreen(navController)
             }
 
+            // ✅ CATEGORY MAIN
             composable("categories_main") {
                 CategoriesMainScreen(navController)
             }
 
-
-
-
+            // ✅ CATEGORY DETAILS
             composable(
                 route = "category/{name}",
+
                 arguments = listOf(
-                    navArgument("name") { type = NavType.StringType }
+                    navArgument("name") {
+                        type = NavType.StringType
+                    }
                 )
             ) { backStackEntry ->
 
-                val name = backStackEntry.arguments?.getString("name")
+                val name =
+                    backStackEntry.arguments
+                        ?.getString("name") ?: ""
 
                 CategoryScreen(
-                    name = name,
-                    navController = navController
+                    navController = navController,
+                    category = name
                 )
             }
+
+            // ✅ SAVED WORDS
             composable("saved_words") {
                 SavedWordsScreen(navController)
             }
 
+            // ✅ FLASHCARDS
             composable("flashcards") {
-                FlashcardScreen( )
+                FlashcardScreen()
             }
 
+            // ✅ SEARCH
             composable(
                 route = "search/{query}",
+
                 arguments = listOf(
                     navArgument("query") {
                         type = NavType.StringType
@@ -71,7 +99,9 @@ fun AppNavGraph(navController: NavHostController) {
                 )
             ) { backStackEntry ->
 
-                val query = backStackEntry.arguments?.getString("query")
+                val query =
+                    backStackEntry.arguments
+                        ?.getString("query") ?: ""
 
                 SearchScreen(
                     navController = navController,
@@ -79,14 +109,20 @@ fun AppNavGraph(navController: NavHostController) {
                 )
             }
 
+            // ✅ WORD DETAIL
             composable(
                 route = "word_detail/{word}",
+
                 arguments = listOf(
-                    navArgument("word") { type = NavType.StringType }
+                    navArgument("word") {
+                        type = NavType.StringType
+                    }
                 )
             ) { backStackEntry ->
 
-                val word = backStackEntry.arguments?.getString("word") ?: ""
+                val word =
+                    backStackEntry.arguments
+                        ?.getString("word") ?: ""
 
                 WordDetailScreen(
                     navController = navController,

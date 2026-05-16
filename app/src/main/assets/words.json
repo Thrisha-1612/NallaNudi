@@ -298,5 +298,53 @@
     "meaning": "Financial obligation",
     "kannadaMeaning": "ಬಾಧ್ಯತೆ",
     "category": "Commerce"
+  },
+  {
+    "word": "Experiment",
+    "meaning": "Scientific test to discover something",
+    "kannadaMeaning": "ಪ್ರಯೋಗ",
+    "category": "Science"
+  },
+  {
+    "word": "Observation",
+    "meaning": "Careful watching and studying",
+    "kannadaMeaning": "ನಿರೀಕ್ಷಣೆ",
+    "category": "Science"
+  },
+  {
+    "word": "Theory",
+    "meaning": "Scientific explanation based on evidence",
+    "kannadaMeaning": "ಸಿದ್ಧಾಂತ",
+    "category": "Science"
+  },
+  {
+    "word": "Hypothesis",
+    "meaning": "Possible explanation for a phenomenon",
+    "kannadaMeaning": "ಕಲ್ಪನೆ",
+    "category": "Science"
+  },
+  {
+    "word": "Laboratory",
+    "meaning": "Place where scientific experiments are done",
+    "kannadaMeaning": "ಪ್ರಯೋಗಾಲಯ",
+    "category": "Science"
+  },
+  {
+    "word": "Research",
+    "meaning": "Detailed scientific study",
+    "kannadaMeaning": "ಸಂಶೋಧನೆ",
+    "category": "Science"
+  },
+  {
+    "word": "Innovation",
+    "meaning": "New scientific idea or method",
+    "kannadaMeaning": "ನವೀನತೆ",
+    "category": "Science"
+  },
+  {
+    "word": "Technology",
+    "meaning": "Application of scientific knowledge",
+    "kannadaMeaning": "ತಂತ್ರಜ್ಞಾನ",
+    "category": "Science"
   }
 ]

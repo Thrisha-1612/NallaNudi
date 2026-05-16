@@ -15,15 +15,14 @@ import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import java.io.IOException
 
-@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContent {
+
             val navController = rememberNavController()
 
             NallaNudiTheme {
@@ -31,10 +30,36 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        // DB initialization code here
+        // ✅ ADD DATABASE INITIALIZATION HERE
+        lifecycleScope.launch(Dispatchers.IO) {
+
+            val db = DatabaseInstance.getDatabase(applicationContext)
+            val dao = db.wordDao()
+
+            val count = dao.getAllWords().first().size
+
+            println("TOTAL WORDS = $count")
+
+            if (count == 0) {
+
+                val words = loadWordsFromJson(applicationContext)
+
+                println("JSON WORDS = ${words.size}")
+
+                dao.insertWords(words)
+
+                println("INSERT COMPLETED")
+            }
+
+            val sample = dao.getAllWords().first().firstOrNull()
+
+            println("SAMPLE WORD = ${sample?.word}")
+            println("SAMPLE CATEGORY = ${sample?.category}")
+        }
     }
 
-    // 👇 ADD HERE (OUTSIDE onCreate)
+    // ✅ ADD THIS BELOW onCreate (INSIDE CLASS BUT OUTSIDE onCreate)
+
     private fun loadWordsFromJson(context: Context): List<WordEntity> {
 
         return try {
@@ -44,21 +69,24 @@ class MainActivity : ComponentActivity() {
                 .bufferedReader()
                 .use { it.readText() }
 
-            val listType = object : com.google.gson.reflect.TypeToken<List<WordJson>>() {}.type
+            val listType =
+                object : TypeToken<List<WordJson>>() {}.type
 
             val jsonList: List<WordJson> =
-                com.google.gson.Gson().fromJson(jsonString, listType)
+                Gson().fromJson(jsonString, listType)
 
             jsonList.map {
+
                 WordEntity(
                     word = it.word,
                     meaning = it.meaning,
                     kannadaMeaning = it.kannadaMeaning,
-                    category = it.category
+                    category = it.category.lowercase()
                 )
             }
 
         } catch (e: Exception) {
+
             e.printStackTrace()
             emptyList()
         }
