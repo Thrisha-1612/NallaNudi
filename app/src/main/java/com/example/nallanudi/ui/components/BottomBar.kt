@@ -1,30 +1,22 @@
 package com.example.nallanudi.ui.components
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.Category
+import androidx.compose.material.icons.filled.FlashOn
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Style
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 
 data class BottomNavItem(
     val route: String,
-    val icon: androidx.compose.ui.graphics.vector.ImageVector,
-    val label: String
+    val title: String,
+    val icon: androidx.compose.ui.graphics.vector.ImageVector
 )
 
 @Composable
@@ -33,108 +25,65 @@ fun BottomBar(navController: NavController) {
     val items = listOf(
 
         BottomNavItem(
-            "home",
-            Icons.Default.Home,
-            "Home"
+            route = "home",
+            title = "Home",
+            icon = Icons.Default.Home
         ),
 
         BottomNavItem(
-            "categories_main",
-            Icons.Default.Category,
-            "Categories"
+            route = "categories_main",
+            title = "Categories",
+            icon = Icons.Default.Category
         ),
 
         BottomNavItem(
-            "flashcards",
-            Icons.Default.Style,
-            "Flashcards"
+            route = "flashcards",
+            title = "Flashcards",
+            icon = Icons.Default.FlashOn
         ),
 
         BottomNavItem(
-            "saved_words",
-            Icons.Default.Bookmark,
-            "Saved"
+            route = "saved_words",
+            title = "Saved",
+            icon = Icons.Default.Bookmark
         )
     )
 
-    val navBackStackEntry =
-        navController.currentBackStackEntryAsState()
+    NavigationBar {
 
-    val currentRoute =
-        navBackStackEntry.value?.destination?.route
+        val navBackStackEntry =
+            navController.currentBackStackEntryAsState()
 
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(
-                horizontal = 16.dp,
-                vertical = 10.dp
-            )
-    ) {
+        val currentRoute =
+            navBackStackEntry.value?.destination?.route
 
-        NavigationBar(
+        items.forEach { item ->
 
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(82.dp)
-                .shadow(
-                    elevation = 18.dp,
-                    shape = RoundedCornerShape(28.dp),
-                    clip = false
-                ),
+            NavigationBarItem(
 
-            containerColor = Color.White,
+                selected = currentRoute == item.route,
 
-            tonalElevation = 0.dp
-        ) {
+                onClick = {
 
-            items.forEach { item ->
+                    navController.navigate(item.route) {
 
-                val selected = currentRoute == item.route
+                        popUpTo(navController.graph.startDestinationId)
 
-                NavigationBarItem(
+                        launchSingleTop = true
+                    }
+                },
 
-                    selected = selected,
-
-                    onClick = {
-
-                        navController.navigate(item.route) {
-
-                            popUpTo(navController.graph.startDestinationId)
-
-                            launchSingleTop = true
-                        }
-                    },
-
-                    icon = {
-
-                        Icon(
-                            imageVector = item.icon,
-                            contentDescription = item.label
-                        )
-                    },
-
-                    label = {
-
-                        Text(item.label)
-                    },
-
-                    alwaysShowLabel = true,
-
-                    colors = NavigationBarItemDefaults.colors(
-
-                        selectedIconColor = Color.White,
-
-                        selectedTextColor = Color(0xFF355C7D),
-
-                        unselectedIconColor = Color.Gray,
-
-                        unselectedTextColor = Color.Gray,
-
-                        indicatorColor = Color(0xFF355C7D)
+                icon = {
+                    Icon(
+                        imageVector = item.icon,
+                        contentDescription = item.title
                     )
-                )
-            }
+                },
+
+                label = {
+                    Text(item.title)
+                }
+            )
         }
     }
 }

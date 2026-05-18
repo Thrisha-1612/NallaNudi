@@ -347,4 +347,284 @@
     "kannadaMeaning": "ತಂತ್ರಜ್ಞಾನ",
     "category": "Science"
   }
-]
+
+  ,
+    {
+      "word": "Photosynthesis",
+      "meaning": "Process by which plants make food using sunlight",
+      "kannadaMeaning": "ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆ",
+      "category": "biology"
+    },
+    {
+      "word": "Cell",
+      "meaning": "Basic unit of life",
+      "kannadaMeaning": "ಕೋಶ",
+      "category": "biology"
+    },
+    {
+      "word": "Tissue",
+      "meaning": "Group of similar cells",
+      "kannadaMeaning": "ಉತಕ",
+      "category": "biology"
+    },
+    {
+      "word": "Respiration",
+      "meaning": "Process of releasing energy from food",
+      "kannadaMeaning": "ಉಸಿರಾಟ",
+      "category": "biology"
+    },
+    {
+      "word": "Osmosis",
+      "meaning": "Movement of water molecules",
+      "kannadaMeaning": "ಆಸ್ಮೋಸಿಸ್",
+      "category": "biology"
+    },
+    {
+      "word": "Neuron",
+      "meaning": "Nerve cell",
+      "kannadaMeaning": "ನ್ಯೂರಾನ್",
+      "category": "biology"
+    },
+    {
+      "word": "DNA",
+      "meaning": "Genetic material",
+      "kannadaMeaning": "ಡಿಎನ್‌ಎ",
+      "category": "biology"
+    },
+    {
+      "word": "Protein",
+      "meaning": "Body building nutrient",
+      "kannadaMeaning": "ಪ್ರೋಟೀನ್",
+      "category": "biology"
+    },
+    {
+      "word": "Enzyme",
+      "meaning": "Biological catalyst",
+      "kannadaMeaning": "ಎಂಜೈಮ್",
+      "category": "biology"
+    },
+    {
+      "word": "Hormone",
+      "meaning": "Chemical messenger in body",
+      "kannadaMeaning": "ಹಾರ್ಮೋನ್",
+      "category": "biology"
+    },
+    {
+      "word": "Mitochondria",
+      "meaning": "Powerhouse of the cell",
+      "kannadaMeaning": "ಮೈಟೋಕಾಂಡ್ರಿಯಾ",
+      "category": "biology"
+    },
+    {
+      "word": "Chlorophyll",
+      "meaning": "Green pigment in plants",
+      "kannadaMeaning": "ಕ್ಲೋರೊಫಿಲ್",
+      "category": "biology"
+    },
+    {
+      "word": "Genetics",
+      "meaning": "Study of heredity and genes",
+      "kannadaMeaning": "ವಂಶವಿಜ್ಞಾನ",
+      "category": "biology"
+    },
+    {
+      "word": "Evolution",
+      "meaning": "Gradual development of organisms",
+      "kannadaMeaning": "ವಿಕಾಸ",
+      "category": "biology"
+    },
+    {
+      "word": "Cytoplasm",
+      "meaning": "Jelly-like substance inside cells",
+      "kannadaMeaning": "ಕೋಶದ್ರವ್ಯ",
+      "category": "biology"
+    },
+    {
+      "word": "Ecosystem",
+      "meaning": "Community of living organisms and environment",
+      "kannadaMeaning": "ಪರಿಸರ ವ್ಯವಸ್ಥೆ",
+      "category": "biology"
+    },
+    {
+      "word": "Atom",
+      "meaning": "Smallest unit of matter",
+      "kannadaMeaning": "ಅಣು",
+      "category": "chemistry"
+    },
+    {
+      "word": "Molecule",
+      "meaning": "Group of atoms bonded together",
+      "kannadaMeaning": "ಅಣುಗುಚ್ಛ",
+      "category": "chemistry"
+    },
+    {
+      "word": "Acid",
+      "meaning": "Substance with pH less than 7",
+      "kannadaMeaning": "ಆಮ್ಲ",
+      "category": "chemistry"
+    },
+    {
+      "word": "Base",
+      "meaning": "Substance with pH greater than 7",
+      "kannadaMeaning": "ಕ್ಷಾರ",
+      "category": "chemistry"
+    },
+    {
+      "word": "Catalyst",
+      "meaning": "Substance that speeds up reaction",
+      "kannadaMeaning": "ಪ್ರೇರಕ",
+      "category": "chemistry"
+    },
+    {
+      "word": "Electron",
+      "meaning": "Negatively charged particle",
+      "kannadaMeaning": "ಇಲೆಕ್ಟ್ರಾನ್",
+      "category": "chemistry"
+    },
+    {
+      "word": "Proton",
+      "meaning": "Positively charged particle",
+      "kannadaMeaning": "ಪ್ರೋಟಾನ್",
+      "category": "chemistry"
+    },
+    {
+      "word": "Neutron",
+      "meaning": "Neutral particle in atom",
+      "kannadaMeaning": "ನ್ಯೂಟ್ರಾನ್",
+      "category": "chemistry"
+    },
+    {
+      "word": "Compound",
+      "meaning": "Substance formed by elements",
+      "kannadaMeaning": "ಸಂಯುಕ್ತ",
+      "category": "chemistry"
+    },
+    {
+      "word": "Solution",
+      "meaning": "Homogeneous mixture",
+      "kannadaMeaning": "ದ್ರಾವಣ",
+      "category": "chemistry"
+    },
+    {
+      "word": "Oxidation",
+      "meaning": "Chemical reaction involving oxygen",
+      "kannadaMeaning": "ಆಕ್ಸೀಕರಣ",
+      "category": "chemistry"
+    },
+    {
+      "word": "Reduction",
+      "meaning": "Gain of electrons in a reaction",
+      "kannadaMeaning": "ಅಪಚಯ",
+      "category": "chemistry"
+    },
+    {
+      "word": "Electrolysis",
+      "meaning": "Chemical decomposition using electricity",
+      "kannadaMeaning": "ವಿದ್ಯುದ್ಘಟನ",
+      "category": "chemistry"
+    },
+    {
+      "word": "Covalent Bond",
+      "meaning": "Bond formed by sharing electrons",
+      "kannadaMeaning": "ಸಹಸಂಬಂಧ",
+      "category": "chemistry"
+    },
+    {
+      "word": "Periodic Table",
+      "meaning": "Table of chemical elements",
+      "kannadaMeaning": "ಆವರ್ತನ ಪಟ್ಟಿಕೆ",
+      "category": "chemistry"
+    },
+    {
+      "word": "Force",
+      "meaning": "Push or pull on an object",
+      "kannadaMeaning": "ಬಲ",
+      "category": "physics"
+    },
+    {
+      "word": "Velocity",
+      "meaning": "Speed in a direction",
+      "kannadaMeaning": "ವೇಗ",
+      "category": "physics"
+    },
+    {
+      "word": "Acceleration",
+      "meaning": "Rate of change of velocity",
+      "kannadaMeaning": "ತ್ವರಣೆ",
+      "category": "physics"
+    },
+    {
+      "word": "Gravity",
+      "meaning": "Force attracting objects toward Earth",
+      "kannadaMeaning": "ಗುರುತ್ವಾಕರ್ಷಣೆ",
+      "category": "physics"
+    },
+    {
+      "word": "Energy",
+      "meaning": "Capacity to do work",
+      "kannadaMeaning": "ಶಕ್ತಿ",
+      "category": "physics"
+    },
+    {
+      "word": "Momentum",
+      "meaning": "Mass in motion",
+      "kannadaMeaning": "ಚಲಶಕ್ತಿ",
+      "category": "physics"
+    },
+    {
+      "word": "Friction",
+      "meaning": "Force resisting motion",
+      "kannadaMeaning": "ಘರ್ಷಣೆ",
+      "category": "physics"
+    },
+    {
+      "word": "Current",
+      "meaning": "Flow of electric charge",
+      "kannadaMeaning": "ವಿದ್ಯುತ್ ಪ್ರವಾಹ",
+      "category": "physics"
+    },
+    {
+      "word": "Voltage",
+      "meaning": "Electric potential difference",
+      "kannadaMeaning": "ವೋಲ್ಟೇಜ್",
+      "category": "physics"
+    },
+    {
+      "word": "Magnetism",
+      "meaning": "Force from magnets",
+      "kannadaMeaning": "ಚುಂಭಕತ್ವ",
+      "category": "physics"
+    },
+    {
+      "word": "Inertia",
+      "meaning": "Resistance to change in motion",
+      "kannadaMeaning": "ಜಡತ್ವ",
+      "category": "physics"
+    },
+    {
+      "word": "Frequency",
+      "meaning": "Number of waves per second",
+      "kannadaMeaning": "ಆವೃತ್ತಿ",
+      "category": "physics"
+    },
+    {
+      "word": "Resistance",
+      "meaning": "Opposition to electric current",
+      "kannadaMeaning": "ಪ್ರತಿರೋಧ",
+      "category": "physics"
+    },
+    {
+      "word": "Wave",
+      "meaning": "Disturbance transferring energy",
+      "kannadaMeaning": "ಅಲೆ",
+      "category": "physics"
+    },
+    {
+      "word": "Newton",
+      "meaning": "Unit of force",
+      "kannadaMeaning": "ನ್ಯೂಟನ್",
+      "category": "physics"
+    }
+  ]
+
+

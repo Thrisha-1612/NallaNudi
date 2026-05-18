@@ -1,21 +1,16 @@
 package com.example.nallanudi.ui.screens
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -24,204 +19,171 @@ import com.example.nallanudi.data.DatabaseInstance
 import com.example.nallanudi.data.WordEntity
 import kotlinx.coroutines.flow.collectLatest
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun FlashcardScreen() {
 
     val context = LocalContext.current
 
+    var words by remember { mutableStateOf<List<WordEntity>>(emptyList()) }
+
     val dao = remember {
-        DatabaseInstance
-            .getDatabase(context)
-            .wordDao()
+        DatabaseInstance.getDatabase(context).wordDao()
     }
 
-    var savedWords by remember {
-        mutableStateOf<List<WordEntity>>(emptyList())
-    }
-
+    // ✅ LIVE AUTO UPDATE (saved words only)
     LaunchedEffect(Unit) {
-
         dao.getSavedWords().collectLatest {
-            savedWords = it
+            words = it
         }
     }
 
-    if (savedWords.isEmpty()) {
+    // ❌ EMPTY STATE
+    if (words.isEmpty()) {
 
         Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color(0xFFF4F7FB)),
-
+            modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
         ) {
 
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-
-                Text(
-                    text = "📚",
-                    fontSize = 54.sp
-                )
-
-                Spacer(modifier = Modifier.height(18.dp))
-
-                Text(
-                    text = "No Saved Flashcards",
-                    fontSize = 24.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color(0xFF1B1F24)
-                )
-
-                Spacer(modifier = Modifier.height(8.dp))
-
-                Text(
-                    text = "Save words to start revising",
-                    color = Color.Gray
-                )
-            }
+            Text(
+                text = "No saved words yet!\nSave words to start learning 📚",
+                color = Color.Gray,
+                fontSize = 16.sp
+            )
         }
 
         return
     }
 
-    val pagerState = rememberPagerState {
-        savedWords.size
-    }
+    val pagerState = rememberPagerState(
+        pageCount = { words.size }
+    )
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF4F7FB))
-            .padding(vertical = 24.dp),
-
+            .background(Color(0xFFF8F9FA)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
+        // HEADER
         Text(
-            text = "Flashcard Revision",
-            fontSize = 30.sp,
+            text = "Flashcards",
+            fontSize = 26.sp,
             fontWeight = FontWeight.Bold,
-            color = Color(0xFF1B1F24)
+            modifier = Modifier.padding(top = 20.dp)
         )
 
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(20.dp))
 
-        Text(
-            text = "Swipe through your saved technical terms",
-            color = Color(0xFF6B7280),
-            fontSize = 15.sp
-        )
-
-        Spacer(modifier = Modifier.height(34.dp))
-
+        // SWIPE CARDS
         HorizontalPager(
             state = pagerState,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxSize()
         ) { page ->
 
-            val word = savedWords[page]
+            FlashCardItem(word = words[page])
+        }
+    }
+}
 
-            var showMeaning by remember(page) {
-                mutableStateOf(false)
-            }
+@Composable
+fun FlashCardItem(word: WordEntity) {
 
-            Card(
-                modifier = Modifier
-                    .padding(horizontal = 24.dp)
-                    .fillMaxWidth()
-                    .height(460.dp)
-                    .clip(RoundedCornerShape(36.dp))
-                    .clickable {
-                        showMeaning = !showMeaning
-                    },
+    var flipped by remember { mutableStateOf(false) }
 
-                elevation = CardDefaults.cardElevation(
-                    defaultElevation = 10.dp
-                ),
-
-                colors = CardDefaults.cardColors(
-                    containerColor = Color.Transparent
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(24.dp)
+            .height(340.dp)
+            .pointerInput(Unit) {
+                detectTapGestures(
+                    onTap = { flipped = !flipped }
                 )
-            ) {
+            },
 
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(
-                            brush = Brush.verticalGradient(
-                                listOf(
-                                    Color(0xFF2C3E50),
-                                    Color(0xFF4CA1AF)
-                                )
-                            )
-                        )
-                        .padding(30.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = if (flipped)
+                Color(0xFF4F6F52)   // dark green
+            else
+                Color.White
+        ),
 
-                    contentAlignment = Alignment.Center
+        elevation = CardDefaults.cardElevation(10.dp)
+    ) {
+
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
+
+            // FRONT SIDE
+            if (!flipped) {
+
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
 
-                    Column(
-                        horizontalAlignment = Alignment.CenterHorizontally
+                    Text(
+                        text = word.word,
+                        fontSize = 28.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.Black
+                    )
+
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    Text(
+                        text = "Tap to reveal meaning",
+                        color = Color.Gray,
+                        fontSize = 14.sp
+                    )
+                }
+
+            }
+            // BACK SIDE
+            else {
+
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier.padding(20.dp)
+                ) {
+
+                    Text(
+                        text = word.meaning,
+                        fontSize = 18.sp,
+                        color = Color.White,
+                        fontWeight = FontWeight.SemiBold
+                    )
+
+                    Spacer(modifier = Modifier.height(12.dp))
+
+                    Text(
+                        text = word.kannadaMeaning,
+                        fontSize = 16.sp,
+                        color = Color.White.copy(alpha = 0.9f)
+                    )
+
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    Surface(
+                        color = Color.White.copy(alpha = 0.2f),
+                        shape = MaterialTheme.shapes.medium
                     ) {
-
                         Text(
-                            text = word.word,
-                            fontSize = 34.sp,
+                            text = word.category,
+                            modifier = Modifier.padding(
+                                horizontal = 12.dp,
+                                vertical = 6.dp
+                            ),
                             color = Color.White,
-                            fontWeight = FontWeight.Bold
+                            fontSize = 12.sp
                         )
-
-                        Spacer(modifier = Modifier.height(22.dp))
-
-                        Text(
-                            text = word.kannadaMeaning,
-                            fontSize = 26.sp,
-                            color = Color.White.copy(alpha = 0.92f),
-                            fontWeight = FontWeight.SemiBold
-                        )
-
-                        Spacer(modifier = Modifier.height(40.dp))
-
-                        if (showMeaning) {
-
-                            Text(
-                                text = word.meaning,
-                                fontSize = 18.sp,
-                                color = Color.White.copy(alpha = 0.96f),
-                                lineHeight = 28.sp
-                            )
-
-                            Spacer(modifier = Modifier.height(24.dp))
-
-                            Text(
-                                text = word.category,
-                                color = Color.White.copy(alpha = 0.7f),
-                                fontSize = 14.sp
-                            )
-
-                        } else {
-
-                            Text(
-                                text = "Tap card to reveal meaning",
-                                color = Color.White.copy(alpha = 0.75f),
-                                fontSize = 15.sp
-                            )
-                        }
                     }
                 }
             }
         }
-
-        Spacer(modifier = Modifier.height(28.dp))
-
-        Text(
-            text = "${pagerState.currentPage + 1} / ${savedWords.size}",
-            color = Color(0xFF6B7280),
-            fontSize = 16.sp,
-            fontWeight = FontWeight.Medium
-        )
     }
 }
