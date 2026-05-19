@@ -26,7 +26,6 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.nallanudi.data.DatabaseInstance
 import com.example.nallanudi.data.WordEntity
-import kotlinx.coroutines.launch
 
 data class CategoryItem(
     val name: String,
@@ -38,19 +37,24 @@ data class CategoryItem(
 fun HomeScreen(navController: NavController) {
 
     val context = LocalContext.current
-    val coroutineScope = rememberCoroutineScope()
 
-    var searchText by remember { mutableStateOf("") }
+    val dao = remember {
+        DatabaseInstance.getDatabase(context).wordDao()
+    }
 
-    var suggestions by remember {
-        mutableStateOf<List<WordEntity>>(emptyList())
+    var searchText by remember {
+        mutableStateOf("")
     }
 
     var showSuggestions by remember {
         mutableStateOf(false)
     }
 
-    // ✅ NEW WORD OF DAY STATE
+    // ✅ SEARCH FLOW
+    val filteredWords by dao.searchWords(searchText)
+        .collectAsState(initial = emptyList())
+
+    // ✅ WORD OF DAY STATE
     var wordOfDay by remember {
         mutableStateOf<WordEntity?>(null)
     }
@@ -93,39 +97,35 @@ fun HomeScreen(navController: NavController) {
             "Biology",
             Color(0xFF4F6F52),
             "🧬"
+        ),CategoryItem(
+            "Computer Science",
+            Color(0xFF1565C0),
+            "💻"
+        ),
+
+        CategoryItem(
+            "English",
+            Color(0xFF8E24AA),
+            "📘"
+        ),
+
+        CategoryItem(
+            "Agriculture",
+            Color(0xFF2E7D32),
+            "🌾"
+        ),
+
+        CategoryItem(
+            "Daily Life",
+            Color(0xFFEF6C00),
+            "🏡"
         )
     )
-
-    fun loadSuggestions(query: String) {
-
-        if (query.trim().length < 2) {
-
-            suggestions = emptyList()
-            showSuggestions = false
-            return
-        }
-
-        coroutineScope.launch {
-
-            val db = DatabaseInstance.getDatabase(context)
-
-            db.wordDao()
-                .searchWords(query.trim())
-                .collect {
-
-                    suggestions = it
-                    showSuggestions = it.isNotEmpty()
-                }
-        }
-    }
 
     // ✅ WORD OF DAY LOADER
     LaunchedEffect(Unit) {
 
-        val db = DatabaseInstance.getDatabase(context)
-
-        db.wordDao()
-            .getAllWords()
+        dao.getAllWords()
             .collect { words ->
 
                 if (words.isNotEmpty()) {
@@ -234,7 +234,7 @@ fun HomeScreen(navController: NavController) {
                 onValueChange = {
 
                     searchText = it
-                    loadSuggestions(it)
+                    showSuggestions = it.length >= 2
                 },
 
                 placeholder = {
@@ -275,7 +275,7 @@ fun HomeScreen(navController: NavController) {
                 singleLine = true
             )
 
-            if (showSuggestions) {
+            if (showSuggestions && filteredWords.isNotEmpty()) {
 
                 Card(
                     modifier = Modifier
@@ -287,7 +287,7 @@ fun HomeScreen(navController: NavController) {
 
                     Column {
 
-                        suggestions.forEach { word ->
+                        filteredWords.take(6).forEach { word ->
 
                             ListItem(
 

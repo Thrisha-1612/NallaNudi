@@ -353,19 +353,19 @@
       "word": "Photosynthesis",
       "meaning": "Process by which plants make food using sunlight",
       "kannadaMeaning": "ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆ",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "Cell",
       "meaning": "Basic unit of life",
       "kannadaMeaning": "ಕೋಶ",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "Tissue",
       "meaning": "Group of similar cells",
       "kannadaMeaning": "ಉತಕ",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "Respiration",
@@ -377,254 +377,2139 @@
       "word": "Osmosis",
       "meaning": "Movement of water molecules",
       "kannadaMeaning": "ಆಸ್ಮೋಸಿಸ್",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "Neuron",
       "meaning": "Nerve cell",
       "kannadaMeaning": "ನ್ಯೂರಾನ್",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "DNA",
       "meaning": "Genetic material",
       "kannadaMeaning": "ಡಿಎನ್‌ಎ",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "Protein",
       "meaning": "Body building nutrient",
       "kannadaMeaning": "ಪ್ರೋಟೀನ್",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "Enzyme",
       "meaning": "Biological catalyst",
       "kannadaMeaning": "ಎಂಜೈಮ್",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "Hormone",
       "meaning": "Chemical messenger in body",
       "kannadaMeaning": "ಹಾರ್ಮೋನ್",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "Mitochondria",
       "meaning": "Powerhouse of the cell",
       "kannadaMeaning": "ಮೈಟೋಕಾಂಡ್ರಿಯಾ",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "Chlorophyll",
       "meaning": "Green pigment in plants",
       "kannadaMeaning": "ಕ್ಲೋರೊಫಿಲ್",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "Genetics",
       "meaning": "Study of heredity and genes",
       "kannadaMeaning": "ವಂಶವಿಜ್ಞಾನ",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "Evolution",
       "meaning": "Gradual development of organisms",
       "kannadaMeaning": "ವಿಕಾಸ",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "Cytoplasm",
       "meaning": "Jelly-like substance inside cells",
       "kannadaMeaning": "ಕೋಶದ್ರವ್ಯ",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "Ecosystem",
       "meaning": "Community of living organisms and environment",
       "kannadaMeaning": "ಪರಿಸರ ವ್ಯವಸ್ಥೆ",
-      "category": "biology"
+      "category": "Biology"
     },
     {
       "word": "Atom",
       "meaning": "Smallest unit of matter",
       "kannadaMeaning": "ಅಣು",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Molecule",
       "meaning": "Group of atoms bonded together",
       "kannadaMeaning": "ಅಣುಗುಚ್ಛ",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Acid",
       "meaning": "Substance with pH less than 7",
       "kannadaMeaning": "ಆಮ್ಲ",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Base",
       "meaning": "Substance with pH greater than 7",
       "kannadaMeaning": "ಕ್ಷಾರ",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Catalyst",
       "meaning": "Substance that speeds up reaction",
       "kannadaMeaning": "ಪ್ರೇರಕ",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Electron",
       "meaning": "Negatively charged particle",
       "kannadaMeaning": "ಇಲೆಕ್ಟ್ರಾನ್",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Proton",
       "meaning": "Positively charged particle",
       "kannadaMeaning": "ಪ್ರೋಟಾನ್",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Neutron",
       "meaning": "Neutral particle in atom",
       "kannadaMeaning": "ನ್ಯೂಟ್ರಾನ್",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Compound",
       "meaning": "Substance formed by elements",
       "kannadaMeaning": "ಸಂಯುಕ್ತ",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Solution",
       "meaning": "Homogeneous mixture",
       "kannadaMeaning": "ದ್ರಾವಣ",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Oxidation",
       "meaning": "Chemical reaction involving oxygen",
       "kannadaMeaning": "ಆಕ್ಸೀಕರಣ",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Reduction",
       "meaning": "Gain of electrons in a reaction",
       "kannadaMeaning": "ಅಪಚಯ",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Electrolysis",
       "meaning": "Chemical decomposition using electricity",
       "kannadaMeaning": "ವಿದ್ಯುದ್ಘಟನ",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Covalent Bond",
       "meaning": "Bond formed by sharing electrons",
       "kannadaMeaning": "ಸಹಸಂಬಂಧ",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Periodic Table",
       "meaning": "Table of chemical elements",
       "kannadaMeaning": "ಆವರ್ತನ ಪಟ್ಟಿಕೆ",
-      "category": "chemistry"
+      "category": "Chemistry"
     },
     {
       "word": "Force",
       "meaning": "Push or pull on an object",
       "kannadaMeaning": "ಬಲ",
-      "category": "physics"
+      "category": "Physics"
     },
     {
       "word": "Velocity",
       "meaning": "Speed in a direction",
       "kannadaMeaning": "ವೇಗ",
-      "category": "physics"
+      "category": "Physics"
     },
     {
       "word": "Acceleration",
       "meaning": "Rate of change of velocity",
       "kannadaMeaning": "ತ್ವರಣೆ",
-      "category": "physics"
+      "category": "Physics"
     },
     {
       "word": "Gravity",
       "meaning": "Force attracting objects toward Earth",
       "kannadaMeaning": "ಗುರುತ್ವಾಕರ್ಷಣೆ",
-      "category": "physics"
+      "category": "Physics"
     },
     {
       "word": "Energy",
       "meaning": "Capacity to do work",
       "kannadaMeaning": "ಶಕ್ತಿ",
-      "category": "physics"
+      "category": "Physics"
     },
     {
       "word": "Momentum",
       "meaning": "Mass in motion",
       "kannadaMeaning": "ಚಲಶಕ್ತಿ",
-      "category": "physics"
+      "category": "Physics"
     },
     {
       "word": "Friction",
       "meaning": "Force resisting motion",
       "kannadaMeaning": "ಘರ್ಷಣೆ",
-      "category": "physics"
+      "category": "Physics"
     },
     {
       "word": "Current",
       "meaning": "Flow of electric charge",
       "kannadaMeaning": "ವಿದ್ಯುತ್ ಪ್ರವಾಹ",
-      "category": "physics"
+      "category": "Physics"
     },
     {
       "word": "Voltage",
       "meaning": "Electric potential difference",
       "kannadaMeaning": "ವೋಲ್ಟೇಜ್",
-      "category": "physics"
+      "category": "Physics"
     },
     {
       "word": "Magnetism",
       "meaning": "Force from magnets",
       "kannadaMeaning": "ಚುಂಭಕತ್ವ",
-      "category": "physics"
+      "category": "Physics"
     },
     {
       "word": "Inertia",
       "meaning": "Resistance to change in motion",
       "kannadaMeaning": "ಜಡತ್ವ",
-      "category": "physics"
+      "category": "Physics"
     },
     {
       "word": "Frequency",
       "meaning": "Number of waves per second",
       "kannadaMeaning": "ಆವೃತ್ತಿ",
-      "category": "physics"
+      "category": "Physics"
     },
     {
       "word": "Resistance",
       "meaning": "Opposition to electric current",
       "kannadaMeaning": "ಪ್ರತಿರೋಧ",
-      "category": "physics"
+      "category": "Physics"
     },
     {
       "word": "Wave",
       "meaning": "Disturbance transferring energy",
       "kannadaMeaning": "ಅಲೆ",
-      "category": "physics"
+      "category": "Physics"
     },
     {
       "word": "Newton",
       "meaning": "Unit of force",
       "kannadaMeaning": "ನ್ಯೂಟನ್",
-      "category": "physics"
+      "category": "Physics"
     }
-  ]
+
+,
+  {
+    "word": "Algorithm",
+    "meaning": "Step-by-step procedure to solve a problem",
+    "kannadaMeaning": "ಅಲ್ಗೋರಿದಮ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Variable",
+    "meaning": "Storage location for data",
+    "kannadaMeaning": "ಚರ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Function",
+    "meaning": "Reusable block of code",
+    "kannadaMeaning": "ಕಾರ್ಯ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Compiler",
+    "meaning": "Program that converts code into machine language",
+    "kannadaMeaning": "ಕಂಪೈಲರ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Database",
+    "meaning": "Organized collection of data",
+    "kannadaMeaning": "ದತ್ತಸಂಗ್ರಹ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "API",
+    "meaning": "Interface that allows software communication",
+    "kannadaMeaning": "ಎಪಿಐ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Artificial Intelligence",
+    "meaning": "Simulation of human intelligence by machines",
+    "kannadaMeaning": "ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Machine Learning",
+    "meaning": "AI technique where systems learn from data",
+    "kannadaMeaning": "ಯಂತ್ರ ಅಧ್ಯಯನ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Network",
+    "meaning": "Connection between computers",
+    "kannadaMeaning": "ಜಾಲ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Cybersecurity",
+    "meaning": "Protection of systems and data from attacks",
+    "kannadaMeaning": "ಸೈಬರ್ ಭದ್ರತೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Programming",
+    "meaning": "Process of writing computer instructions",
+    "kannadaMeaning": "ಪ್ರೋಗ್ರಾಮಿಂಗ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Software",
+    "meaning": "Programs used by computers",
+    "kannadaMeaning": "ಸಾಫ್ಟ್‌ವೇರ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Hardware",
+    "meaning": "Physical parts of a computer",
+    "kannadaMeaning": "ಹಾರ್ಡ್‌ವೇರ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Cloud Computing",
+    "meaning": "Using internet-based computing services",
+    "kannadaMeaning": "ಕ್ಲೌಡ್ ಕಂಪ್ಯೂಟಿಂಗ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Encryption",
+    "meaning": "Method of securing information",
+    "kannadaMeaning": "ಗುಪ್ತೀಕರಣ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Data Structure",
+    "meaning": "Way of organizing data",
+    "kannadaMeaning": "ದತ್ತ ರಚನೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Loop",
+    "meaning": "Repeating sequence in programming",
+    "kannadaMeaning": "ಪುನರಾವರ್ತನೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Boolean",
+    "meaning": "True or false value",
+    "kannadaMeaning": "ಬೂಲಿಯನ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Debugging",
+    "meaning": "Finding and fixing program errors",
+    "kannadaMeaning": "ದೋಷ ಸರಿಪಡಿಸುವಿಕೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Application",
+    "meaning": "Software designed for users",
+    "kannadaMeaning": "ಅನ್ವಯಿಕೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Statistics",
+    "meaning": "Study of collecting and analyzing data",
+    "kannadaMeaning": "ಸಾಂಖ್ಯಿಕಶಾಸ್ತ್ರ",
+    "category": "Math"
+  },
+  {
+    "word": "Probability",
+    "meaning": "Chance of an event occurring",
+    "kannadaMeaning": "ಸಂಭಾವ್ಯತೆ",
+    "category": "Math"
+  },
+  {
+    "word": "Matrix",
+    "meaning": "Rectangular arrangement of numbers",
+    "kannadaMeaning": "ಮ್ಯಾಟ್ರಿಕ್ಸ್",
+    "category": "Math"
+  },
+  {
+    "word": "Vector",
+    "meaning": "Quantity with magnitude and direction",
+    "kannadaMeaning": "ವೇಕ್ಟರ್",
+    "category": "Math"
+  },
+  {
+    "word": "Polynomial",
+    "meaning": "Expression with variables and coefficients",
+    "kannadaMeaning": "ಬಹುಪದ",
+    "category": "Math"
+  },
+  {
+    "word": "Calculus",
+    "meaning": "Study of change and motion",
+    "kannadaMeaning": "ಕ್ಯಾಲ್ಕುಲಸ್",
+    "category": "Math"
+  },
+  {
+    "word": "Trigonometry",
+    "meaning": "Study of triangles and angles",
+    "kannadaMeaning": "ತ್ರಿಕೋಣಮಿತಿ",
+    "category": "Math"
+  },
+  {
+    "word": "Angle",
+    "meaning": "Figure formed by two rays",
+    "kannadaMeaning": "ಕೋನ",
+    "category": "Math"
+  },
+  {
+    "word": "Perimeter",
+    "meaning": "Distance around a shape",
+    "kannadaMeaning": "ಪರಿಧಿ",
+    "category": "Math"
+  },
+  {
+    "word": "Area",
+    "meaning": "Space occupied by a shape",
+    "kannadaMeaning": "ವಿಸ್ತೀರ್ಣ",
+    "category": "Math"
+  },
+  {
+    "word": "Volume",
+    "meaning": "Amount of space occupied",
+    "kannadaMeaning": "ಘನಪರಿಮಾಣ",
+    "category": "Math"
+  },
+  {
+    "word": "Decimal",
+    "meaning": "Fraction represented with a point",
+    "kannadaMeaning": "ದಶಮಾಂಶ",
+    "category": "Math"
+  },
+  {
+    "word": "Ratio",
+    "meaning": "Comparison between two quantities",
+    "kannadaMeaning": "ಅನುಪಾತ",
+    "category": "Math"
+  },
+  {
+    "word": "Average",
+    "meaning": "Central value of numbers",
+    "kannadaMeaning": "ಸರಾಸರಿ",
+    "category": "Math"
+  },
+  {
+    "word": "Graph",
+    "meaning": "Visual representation of data",
+    "kannadaMeaning": "ಗ್ರಾಫ್",
+    "category": "Math"
+  },
+  {
+    "word": "Supply",
+    "meaning": "Amount of goods available",
+    "kannadaMeaning": "ಪೂರೈಕೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Demand",
+    "meaning": "Need for goods or services",
+    "kannadaMeaning": "ಬೇಡಿಕೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Capital",
+    "meaning": "Money used to start business",
+    "kannadaMeaning": "ಮೂಲಧನ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Market",
+    "meaning": "Place where buying and selling happen",
+    "kannadaMeaning": "ಮಾರುಕಟ್ಟೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Shares",
+    "meaning": "Units of company ownership",
+    "kannadaMeaning": "ಹಂಚಿಕೆಗಳು",
+    "category": "Commerce"
+  },
+  {
+    "word": "Stock",
+    "meaning": "Investment in a company",
+    "kannadaMeaning": "ಷೇರು",
+    "category": "Commerce"
+  },
+  {
+    "word": "Audit",
+    "meaning": "Inspection of financial records",
+    "kannadaMeaning": "ಲೆಕ್ಕಪರಿಶೋಧನೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Invoice",
+    "meaning": "Bill for goods or services",
+    "kannadaMeaning": "ಬಿಲ್",
+    "category": "Commerce"
+  },
+  {
+    "word": "Transaction",
+    "meaning": "Exchange of money or goods",
+    "kannadaMeaning": "ವಹಿವಾಟು",
+    "category": "commerce"
+  },
+  {
+    "word": "Entrepreneur",
+    "meaning": "Person who starts a business",
+    "kannadaMeaning": "ಉದ್ಯಮಿ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Marketing",
+    "meaning": "Promotion of products and services",
+    "kannadaMeaning": "ಮಾರಾಟ ಪ್ರಚಾರ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Economy",
+    "meaning": "System of production and consumption",
+    "kannadaMeaning": "ಆರ್ಥಿಕ ವ್ಯವಸ್ಥೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Inflation",
+    "meaning": "Rise in prices over time",
+    "kannadaMeaning": "ದುಬಾರಿ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Credit",
+    "meaning": "Ability to borrow money",
+    "kannadaMeaning": "ಸಾಲ ಸೌಲಭ್ಯ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Debit",
+    "meaning": "Money deducted from account",
+    "kannadaMeaning": "ಖರ್ಚು ದಾಖಲೆ",
+    "category": "Commerce"
+  }
+,
+  {
+    "word": "Bacteria",
+    "meaning": "Microscopic single-celled organism",
+    "kannadaMeaning": "ಬ್ಯಾಕ್ಟೀರಿಯಾ",
+    "category": "Biology"
+  },
+  {
+    "word": "Virus",
+    "meaning": "Tiny infectious agent",
+    "kannadaMeaning": "ವೈರಸ್",
+    "category": "Biology"
+  },
+  {
+    "word": "Vaccine",
+    "meaning": "Substance used to develop immunity",
+    "kannadaMeaning": "ಲಸಿಕೆ",
+    "category": "Biology"
+  },
+  {
+    "word": "Digestive System",
+    "meaning": "System that breaks down food",
+    "kannadaMeaning": "ಜೀರ್ಣಾಂಗ ವ್ಯವಸ್ಥೆ",
+    "category": "Biology"
+  },
+  {
+    "word": "Skeleton",
+    "meaning": "Framework of bones in the body",
+    "kannadaMeaning": "ಅಸ್ಥಿಪಂಜರ",
+    "category": "Biology"
+  },
+  {
+    "word": "Biodiversity",
+    "meaning": "Variety of living organisms",
+    "kannadaMeaning": "ಜೈವ ವೈವಿಧ್ಯತೆ",
+    "category": "Biology"
+  },
+  {
+    "word": "Habitat",
+    "meaning": "Natural home of an organism",
+    "kannadaMeaning": "ವಾಸಸ್ಥಾನ",
+    "category": "Biology"
+  },
+  {
+    "word": "Nucleus",
+    "meaning": "Control center of a cell",
+    "kannadaMeaning": "ಕೇಂದ್ರಕ",
+    "category": "Biology"
+  },
+  {
+    "word": "Organic Compound",
+    "meaning": "Compound containing carbon",
+    "kannadaMeaning": "ಸಸ್ಯಜ ಸಂಯುಕ್ತ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Solvent",
+    "meaning": "Substance that dissolves another substance",
+    "kannadaMeaning": "ದ್ರಾವಕ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Solubility",
+    "meaning": "Ability to dissolve in a liquid",
+    "kannadaMeaning": "ದ್ರಾವಣೀಯತೆ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Evaporation",
+    "meaning": "Conversion of liquid into vapor",
+    "kannadaMeaning": "ಆವೀಭವನ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Condensation",
+    "meaning": "Conversion of vapor into liquid",
+    "kannadaMeaning": "ಘನೀಭವನ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Distillation",
+    "meaning": "Method of separating liquids",
+    "kannadaMeaning": "ಆಸವನ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "pH Scale",
+    "meaning": "Scale used to measure acidity",
+    "kannadaMeaning": "ಪಿಎಚ್ ಮಾನದಂಡ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Isotope",
+    "meaning": "Atoms with same atomic number but different mass",
+    "kannadaMeaning": "ಐಸೋಟೋಪ್",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Reflection",
+    "meaning": "Bouncing back of light",
+    "kannadaMeaning": "ಪ್ರತಿಫಲನ",
+    "category": "Physics"
+  },
+  {
+    "word": "Refraction",
+    "meaning": "Bending of light",
+    "kannadaMeaning": "ವಕ್ರಭಂಗ",
+    "category": "Physics"
+  },
+  {
+    "word": "Density",
+    "meaning": "Mass per unit volume",
+    "kannadaMeaning": "ಸಾಂದ್ರತೆ",
+    "category": "Physics"
+  },
+  {
+    "word": "Pressure",
+    "meaning": "Force applied per unit area",
+    "kannadaMeaning": "ಒತ್ತಡ",
+    "category": "physics"
+  },
+  {
+    "word": "Thermodynamics",
+    "meaning": "Study of heat and energy",
+    "kannadaMeaning": "ಉಷ್ಣಗತವಿಜ್ಞಾನ",
+    "category": "Physics"
+  },
+  {
+    "word": "Transformer",
+    "meaning": "Device that changes voltage",
+    "kannadaMeaning": "ಟ್ರಾನ್ಸ್‌ಫಾರ್ಮರ್",
+    "category": "Physics"
+  },
+  {
+    "word": "Spectrum",
+    "meaning": "Band of colors produced by light",
+    "kannadaMeaning": "ವರ್ಣಪಟ",
+    "category": "Physics"
+  },
+  {
+    "word": "Optics",
+    "meaning": "Study of light",
+    "kannadaMeaning": "ಪ್ರಕಾಶಶಾಸ್ತ್ರ",
+    "category": "Physics"
+  },
+  {
+    "word": "Trigonometry",
+    "meaning": "Study of triangles and angles",
+    "kannadaMeaning": "ತ್ರಿಕೋನಮಿತಿ",
+    "category": "Math"
+  },
+  {
+    "word": "Coordinate Geometry",
+    "meaning": "Study of geometry using coordinates",
+    "kannadaMeaning": "ನಿರ್ದೇಶಾಂಕ ರೇಖಾಗಣಿತ",
+    "category": "Math"
+  },
+  {
+    "word": "Mean",
+    "meaning": "Average value of numbers",
+    "kannadaMeaning": "ಸರಾಸರಿ",
+    "category": "Math"
+  },
+  {
+    "word": "Median",
+    "meaning": "Middle value in a data set",
+    "kannadaMeaning": "ಮಧ್ಯಕ",
+    "category": "Math"
+  },
+  {
+    "word": "Mode",
+    "meaning": "Most frequently occurring value",
+    "kannadaMeaning": "ಬಹುಲಕ",
+    "category": "Math"
+  },
+  {
+    "word": "Statistics",
+    "meaning": "Study of data collection and analysis",
+    "kannadaMeaning": "ಅಂಕಿಅಂಶಶಾಸ್ತ್ರ",
+    "category": "Math"
+  },
+  {
+    "word": "Ratio",
+    "meaning": "Comparison between two quantities",
+    "kannadaMeaning": "ಅನುಪಾತ",
+    "category": "Math"
+  },
+  {
+    "word": "Linear Equation",
+    "meaning": "Equation representing a straight line",
+    "kannadaMeaning": "ರೇಖೀಯ ಸಮೀಕರಣ",
+    "category": "Math"
+  },
+  {
+    "word": "Entrepreneur",
+    "meaning": "Person who starts a business",
+    "kannadaMeaning": "ಉದ್ಯಮಿ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Capital",
+    "meaning": "Money invested in business",
+    "kannadaMeaning": "ಮುಡಿಗೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Marketing",
+    "meaning": "Process of promoting products",
+    "kannadaMeaning": "ಮಾರ್ಕೆಟಿಂಗ್",
+    "category": "Commerce"
+  },
+  {
+    "word": "Accounting",
+    "meaning": "Recording financial transactions",
+    "kannadaMeaning": "ಲೆಕ್ಕಪತ್ರ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Audit",
+    "meaning": "Inspection of financial accounts",
+    "kannadaMeaning": "ಪರಿಶೀಲನೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Shareholder",
+    "meaning": "Person owning company shares",
+    "kannadaMeaning": "ಹಂಚಿಕೆದಾರ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Stock Market",
+    "meaning": "Market for buying and selling shares",
+    "kannadaMeaning": "ಷೇರು ಮಾರುಕಟ್ಟೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Dividend",
+    "meaning": "Profit paid to shareholders",
+    "kannadaMeaning": "ಲಾಭಾಂಶ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Programming",
+    "meaning": "Writing instructions for computers",
+    "kannadaMeaning": "ಪ್ರೋಗ್ರಾಮಿಂಗ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Software",
+    "meaning": "Programs used by computers",
+    "kannadaMeaning": "ಸಾಫ್ಟ್‌ವೇರ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Hardware",
+    "meaning": "Physical parts of a computer",
+    "kannadaMeaning": "ಹಾರ್ಡ್‌ವೇರ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Operating System",
+    "meaning": "Software that manages computer resources",
+    "kannadaMeaning": "ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Cloud Computing",
+    "meaning": "Using internet-based computing services",
+    "kannadaMeaning": "ಕ್ಲೌಡ್ ಕಂಪ್ಯೂಟಿಂಗ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Data Structure",
+    "meaning": "Way of organizing data",
+    "kannadaMeaning": "ದತ್ತಸಂರಚನೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Binary",
+    "meaning": "Number system using 0 and 1",
+    "kannadaMeaning": "ದ್ವಿಮಾನ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Debugging",
+    "meaning": "Finding and fixing program errors",
+    "kannadaMeaning": "ದೋಷ ನಿವಾರಣೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Internet",
+    "meaning": "Global network connecting computers",
+    "kannadaMeaning": "ಇಂಟರ್ನೆಟ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Blockchain",
+    "meaning": "Secure distributed digital ledger",
+    "kannadaMeaning": "ಬ್ಲಾಕ್‌ಚೈನ್",
+    "category": "Computer Science"
+  }
+,
+  {
+    "word": "Environment",
+    "meaning": "Surroundings in which living things exist",
+    "kannadaMeaning": "ಪರಿಸರ",
+    "category": "Science"
+  },
+  {
+    "word": "Constitution",
+    "meaning": "Set of fundamental laws of a country",
+    "kannadaMeaning": "ಸಂವಿಧಾನ",
+    "category": "Social Science"
+  },
+  {
+    "word": "Entrepreneur",
+    "meaning": "Person who starts a business",
+    "kannadaMeaning": "ಉದ್ಯಮಿ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Psychology",
+    "meaning": "Study of mind and behavior",
+    "kannadaMeaning": "ಮನೋವಿಜ್ಞಾನ",
+    "category": "Science"
+  },
+  {
+    "word": "Architecture",
+    "meaning": "Design and construction of buildings",
+    "kannadaMeaning": "ವಾಸ್ತುಶಿಲ್ಪ",
+    "category": "Engineering"
+  },
+  {
+    "word": "Entrepreneurship",
+    "meaning": "Skill of starting and managing business",
+    "kannadaMeaning": "ಉದ್ಯಮಶೀಲತೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Microorganism",
+    "meaning": "Tiny living organism seen only under microscope",
+    "kannadaMeaning": "ಸೂಕ್ಷ್ಮಜೀವಿ",
+    "category": "Biology"
+  },
+  {
+    "word": "Electromagnetic",
+    "meaning": "Related to electricity and magnetism",
+    "kannadaMeaning": "ವಿದ್ಯುತ್‌ಚುಂಬಕೀಯ",
+    "category": "Physics"
+  },
+  {
+    "word": "Biotechnology",
+    "meaning": "Technology using living organisms",
+    "kannadaMeaning": "ಜೈವ ತಂತ್ರಜ್ಞಾನ",
+    "category": "Biology"
+  },
+  {
+    "word": "Thermodynamics",
+    "meaning": "Study of heat and energy",
+    "kannadaMeaning": "ಉಷ್ಮಾಗತಶಾಸ್ತ್ರ",
+    "category": "Physics"
+  },
+  {
+    "word": "Administration",
+    "meaning": "Management of organization or system",
+    "kannadaMeaning": "ನಿರ್ವಹಣೆ",
+    "category": "General"
+  },
+  {
+    "word": "Communication",
+    "meaning": "Exchange of information",
+    "kannadaMeaning": "ಸಂವಹನ",
+    "category": "General"
+  },
+  {
+    "word": "Infrastructure",
+    "meaning": "Basic physical systems of society",
+    "kannadaMeaning": "ಮೂಲಸೌಕರ್ಯ",
+    "category": "General"
+  },
+  {
+    "word": "Interpretation",
+    "meaning": "Explanation of meaning",
+    "kannadaMeaning": "ವ್ಯಾಖ್ಯಾನ",
+    "category": "General"
+  },
+  {
+    "word": "Responsibility",
+    "meaning": "Duty or obligation",
+    "kannadaMeaning": "ಜವಾಬ್ದಾರಿ",
+    "category": "General"
+  },
+  {
+    "word": "Mathematics",
+    "meaning": "Study of numbers and calculations",
+    "kannadaMeaning": "ಗಣಿತಶಾಸ್ತ್ರ",
+    "category": "Math"
+  },
+  {
+    "word": "Trigonometry",
+    "meaning": "Study of triangles and angles",
+    "kannadaMeaning": "ತ್ರಿಕೋನಮಿತಿ",
+    "category": "Math"
+  },
+  {
+    "word": "Differentiation",
+    "meaning": "Process of finding derivative",
+    "kannadaMeaning": "ಅವಕಲನ",
+    "category": "Math"
+  },
+  {
+    "word": "Integration",
+    "meaning": "Process of finding integral",
+    "kannadaMeaning": "ಸಮಾಕಲನ",
+    "category": "Math"
+  },
+  {
+    "word": "Probability",
+    "meaning": "Chance of occurrence of an event",
+    "kannadaMeaning": "ಸಂಭಾವ್ಯತೆ",
+    "category": "Math"
+  },
+  {
+    "word": "Acceleration",
+    "meaning": "Rate of change of velocity",
+    "kannadaMeaning": "ತ್ವರಣೆ",
+    "category": "Physics"
+  },
+  {
+    "word": "Semiconductor",
+    "meaning": "Material partially conducting electricity",
+    "kannadaMeaning": "ಅರ್ಧವಾಹಕ",
+    "category": "Physics"
+  },
+  {
+    "word": "Superconductivity",
+    "meaning": "Zero resistance flow of electricity",
+    "kannadaMeaning": "ಅತಿವಾಹಕತೆ",
+    "category": "Physics"
+  },
+  {
+    "word": "Oscillation",
+    "meaning": "Repeated back and forth motion",
+    "kannadaMeaning": "ದೋಲನ",
+    "category": "Physics"
+  },
+  {
+    "word": "Gravitational",
+    "meaning": "Related to gravity",
+    "kannadaMeaning": "ಗುರುತ್ವಾಕರ್ಷಣೀಯ",
+    "category": "Physics"
+  },
+  {
+    "word": "Photosynthesis",
+    "meaning": "Process by which plants prepare food",
+    "kannadaMeaning": "ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆ",
+    "category": "Biology"
+  },
+  {
+    "word": "Reproduction",
+    "meaning": "Process of producing offspring",
+    "kannadaMeaning": "ಪ್ರಜನನ",
+    "category": "Biology"
+  },
+  {
+    "word": "Classification",
+    "meaning": "Arrangement into groups",
+    "kannadaMeaning": "ವರ್ಗೀಕರಣ",
+    "category": "Biology"
+  },
+  {
+    "word": "Transportation",
+    "meaning": "Movement of substances in body",
+    "kannadaMeaning": "ಸಾಗಣೆ",
+    "category": "Biology"
+  },
+  {
+    "word": "Biodiversity",
+    "meaning": "Variety of living organisms",
+    "kannadaMeaning": "ಜೈವ ವೈವಿಧ್ಯತೆ",
+    "category": "Biology"
+  },
+  {
+    "word": "Hydrochloric Acid",
+    "meaning": "Strong acid found in stomach",
+    "kannadaMeaning": "ಹೈಡ್ರೋಕ್ಲೋರಿಕ್ ಆಮ್ಲ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Electrolysis",
+    "meaning": "Chemical decomposition using electricity",
+    "kannadaMeaning": "ವಿದ್ಯುದ್ಘಟನ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Neutralization",
+    "meaning": "Reaction between acid and base",
+    "kannadaMeaning": "ತಟಸ್ಥೀಕರಣ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Crystallization",
+    "meaning": "Formation of crystals",
+    "kannadaMeaning": "ಸ್ಫಟಿಕೀಕರಣ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Polymerization",
+    "meaning": "Process of forming polymers",
+    "kannadaMeaning": "ಪಾಲಿಮರೀಕರಣ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Algorithm",
+    "meaning": "Step-by-step problem solving method",
+    "kannadaMeaning": "ಅಲ್ಗೋರಿದಮ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Authentication",
+    "meaning": "Process of verifying identity",
+    "kannadaMeaning": "ಪ್ರಮಾಣೀಕರಣ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Cybersecurity",
+    "meaning": "Protection of digital systems",
+    "kannadaMeaning": "ಸೈಬರ್ ಭದ್ರತೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Virtualization",
+    "meaning": "Creation of virtual systems",
+    "kannadaMeaning": "ವರ್ಚುವಲೈಸೇಶನ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Artificial Intelligence",
+    "meaning": "Simulation of human intelligence by machines",
+    "kannadaMeaning": "ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ",
+    "category": "Computer Science"
+  }
+,
+  {
+    "word": "Accountability",
+    "meaning": "Responsibility for actions and decisions",
+    "kannadaMeaning": "ಹೊಣೆಗಾರಿಕೆ",
+    "category": "General"
+  },
+  {
+    "word": "Acknowledgement",
+    "meaning": "Recognition or acceptance of something",
+    "kannadaMeaning": "ಸ್ವೀಕೃತಿ",
+    "category": "General"
+  },
+  {
+    "word": "Administration",
+    "meaning": "Process of managing organizations",
+    "kannadaMeaning": "ನಿರ್ವಹಣೆ",
+    "category": "General"
+  },
+  {
+    "word": "Civilization",
+    "meaning": "Advanced stage of human society",
+    "kannadaMeaning": "ನಾಗರಿಕತೆ",
+    "category": "Social Science"
+  },
+  {
+    "word": "Industrialization",
+    "meaning": "Development of industries in a region",
+    "kannadaMeaning": "ಉದ್ಯಮೀಕರಣ",
+    "category": "Social Science"
+  },
+  {
+    "word": "Globalization",
+    "meaning": "Worldwide interaction and integration",
+    "kannadaMeaning": "ಜಾಗತೀಕರಣ",
+    "category": "Social Science"
+  },
+  {
+    "word": "Urbanization",
+    "meaning": "Growth of cities and towns",
+    "kannadaMeaning": "ನಗರೀಕರಣ",
+    "category": "Social Science"
+  },
+  {
+    "word": "Democracy",
+    "meaning": "Government by the people",
+    "kannadaMeaning": "ಪ್ರಜಾಪ್ರಭುತ್ವ",
+    "category": "Social Science"
+  },
+  {
+    "word": "Legislature",
+    "meaning": "Law making body of government",
+    "kannadaMeaning": "ವಿಧಾನಮಂಡಲ",
+    "category": "Social Science"
+  },
+  {
+    "word": "Judiciary",
+    "meaning": "System of courts and judges",
+    "kannadaMeaning": "ನ್ಯಾಯಾಂಗ",
+    "category": "Social Science"
+  },
+  {
+    "word": "Conservation",
+    "meaning": "Protection and preservation of resources",
+    "kannadaMeaning": "ಸಂರಕ್ಷಣೆ",
+    "category": "Science"
+  },
+  {
+    "word": "Deforestation",
+    "meaning": "Cutting down of forests",
+    "kannadaMeaning": "ಅರಣ್ಯನಾಶ",
+    "category": "Science"
+  },
+  {
+    "word": "Afforestation",
+    "meaning": "Planting trees in barren land",
+    "kannadaMeaning": "ಅರಣ್ಯೀಕರಣ",
+    "category": "Science"
+  },
+  {
+    "word": "Ecosystem",
+    "meaning": "Interaction of living things and environment",
+    "kannadaMeaning": "ಪರಿಸರ ವ್ಯವಸ್ಥೆ",
+    "category": "Science"
+  },
+  {
+    "word": "Biodegradable",
+    "meaning": "Able to decay naturally",
+    "kannadaMeaning": "ಜೈವಿಕವಾಗಿ ಕರಗುವ",
+    "category": "Science"
+  },
+  {
+    "word": "Nonbiodegradable",
+    "meaning": "Unable to decay naturally",
+    "kannadaMeaning": "ಜೈವಿಕವಾಗಿ ಕರಗದ",
+    "category": "Science"
+  },
+  {
+    "word": "Entrepreneurship",
+    "meaning": "Skill of managing business ventures",
+    "kannadaMeaning": "ಉದ್ಯಮಶೀಲತೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Depreciation",
+    "meaning": "Decrease in value over time",
+    "kannadaMeaning": "ಮೌಲ್ಯಹ್ರಾಸ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Infrastructure",
+    "meaning": "Basic facilities and systems",
+    "kannadaMeaning": "ಮೂಲಸೌಕರ್ಯ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Entrepreneur",
+    "meaning": "Person who starts business ventures",
+    "kannadaMeaning": "ಉದ್ಯಮಿ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Communication",
+    "meaning": "Exchange of information and ideas",
+    "kannadaMeaning": "ಸಂವಹನ",
+    "category": "General"
+  },
+  {
+    "word": "Pronunciation",
+    "meaning": "Way a word is spoken",
+    "kannadaMeaning": "ಉಚ್ಚಾರಣೆ",
+    "category": "English"
+  },
+  {
+    "word": "Vocabulary",
+    "meaning": "Collection of words known by a person",
+    "kannadaMeaning": "ಪದಸಂಪತ್ತು",
+    "category": "English"
+  },
+  {
+    "word": "Interpretation",
+    "meaning": "Explanation of meaning",
+    "kannadaMeaning": "ವ್ಯಾಖ್ಯಾನ",
+    "category": "English"
+  },
+  {
+    "word": "Comprehension",
+    "meaning": "Ability to understand something",
+    "kannadaMeaning": "ಅರ್ಥಗ್ರಹಣ",
+    "category": "English"
+  },
+  {
+    "word": "Implementation",
+    "meaning": "Process of putting plan into action",
+    "kannadaMeaning": "ಅಮಲಿ",
+    "category": "General"
+  },
+  {
+    "word": "Coordination",
+    "meaning": "Organizing activities effectively",
+    "kannadaMeaning": "ಸಮನ್ವಯ",
+    "category": "General"
+  },
+  {
+    "word": "Exaggeration",
+    "meaning": "Statement made larger than reality",
+    "kannadaMeaning": "ಅತಿಶಯೋಕ್ತಿ",
+    "category": "English"
+  },
+  {
+    "word": "Differentiation",
+    "meaning": "Process of finding differences",
+    "kannadaMeaning": "ವೈವಿಧ್ಯೀಕರಣ",
+    "category": "Math"
+  },
+  {
+    "word": "Approximation",
+    "meaning": "Value close to exact answer",
+    "kannadaMeaning": "ಅಂದಾಜು",
+    "category": "Math"
+  },
+  {
+    "word": "Multiplication",
+    "meaning": "Mathematical operation of repeated addition",
+    "kannadaMeaning": "ಗುಣಾಕಾರ",
+    "category": "Math"
+  },
+  {
+    "word": "Simultaneous Equation",
+    "meaning": "Two or more equations solved together",
+    "kannadaMeaning": "ಏಕಕಾಲೀನ ಸಮೀಕರಣ",
+    "category": "Math"
+  },
+  {
+    "word": "Perpendicular",
+    "meaning": "Lines meeting at right angle",
+    "kannadaMeaning": "ಲಂಬ",
+    "category": "Math"
+  },
+  {
+    "word": "Electromagnetism",
+    "meaning": "Study of electricity and magnetism",
+    "kannadaMeaning": "ವಿದ್ಯುತ್‌ಚುಂಬಕತ್ವ",
+    "category": "Physics"
+  },
+  {
+    "word": "Reflection",
+    "meaning": "Bouncing back of light",
+    "kannadaMeaning": "ಪ್ರತಿಫಲನ",
+    "category": "Physics"
+  },
+  {
+    "word": "Refraction",
+    "meaning": "Bending of light",
+    "kannadaMeaning": "ವಕ್ರೀಭವನ",
+    "category": "Physics"
+  },
+  {
+    "word": "Semiconductor",
+    "meaning": "Material partially conducting electricity",
+    "kannadaMeaning": "ಅರ್ಧವಾಹಕ",
+    "category": "Physics"
+  },
+  {
+    "word": "Transformer",
+    "meaning": "Device that changes voltage",
+    "kannadaMeaning": "ಟ್ರಾನ್ಸ್‌ಫಾರ್ಮರ್",
+    "category": "Physics"
+  },
+  {
+    "word": "Photosynthesis",
+    "meaning": "Preparation of food by plants",
+    "kannadaMeaning": "ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆ",
+    "category": "Biology"
+  },
+  {
+    "word": "Transportation",
+    "meaning": "Movement of materials in organisms",
+    "kannadaMeaning": "ಸಾಗಣೆ",
+    "category": "Biology"
+  },
+  {
+    "word": "Respiratory System",
+    "meaning": "Body system used for breathing",
+    "kannadaMeaning": "ಉಸಿರಾಟ ವ್ಯವಸ್ಥೆ",
+    "category": "Biology"
+  },
+  {
+    "word": "Reproductive System",
+    "meaning": "System responsible for reproduction",
+    "kannadaMeaning": "ಪ್ರಜನನ ವ್ಯವಸ್ಥೆ",
+    "category": "Biology"
+  },
+  {
+    "word": "Classification",
+    "meaning": "Grouping based on similarities",
+    "kannadaMeaning": "ವರ್ಗೀಕರಣ",
+    "category": "Biology"
+  },
+  {
+    "word": "Neutralization",
+    "meaning": "Reaction between acid and base",
+    "kannadaMeaning": "ತಟಸ್ಥೀಕರಣ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Crystallization",
+    "meaning": "Formation of crystals from solution",
+    "kannadaMeaning": "ಸ್ಫಟಿಕೀಕರಣ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Polymerization",
+    "meaning": "Formation of polymers",
+    "kannadaMeaning": "ಪಾಲಿಮರೀಕರಣ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Hydrocarbon",
+    "meaning": "Compound containing hydrogen and carbon",
+    "kannadaMeaning": "ಹೈಡ್ರೋಕಾರ್ಬನ್",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Electroplating",
+    "meaning": "Coating metal using electricity",
+    "kannadaMeaning": "ವಿದ್ಯುತ್ ಲೇಪನ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Authentication",
+    "meaning": "Verification of identity",
+    "kannadaMeaning": "ಪ್ರಮಾಣೀಕರಣ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Programming",
+    "meaning": "Writing instructions for computers",
+    "kannadaMeaning": "ಕಾರ್ಯಕ್ರಮ ರಚನೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Microprocessor",
+    "meaning": "Small processor inside computers",
+    "kannadaMeaning": "ಮೈಕ್ರೋಪ್ರೊಸೆಸರ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Virtualization",
+    "meaning": "Creating virtual systems",
+    "kannadaMeaning": "ವರ್ಚುವಲೈಸೇಶನ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Cybersecurity",
+    "meaning": "Protection of computer systems",
+    "kannadaMeaning": "ಸೈಬರ್ ಭದ್ರತೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Entrepreneurship",
+    "meaning": "Ability to start and manage businesses",
+    "kannadaMeaning": "ಉದ್ಯಮಶೀಲತೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Miscellaneous",
+    "meaning": "Collection of different kinds of things",
+    "kannadaMeaning": "ವಿವಿಧ",
+    "category": "English"
+  },
+  {
+    "word": "Questionnaire",
+    "meaning": "Set of questions for gathering information",
+    "kannadaMeaning": "ಪ್ರಶ್ನಾವಳಿ",
+    "category": "english"
+  },
+  {
+    "word": "Psychiatrist",
+    "meaning": "Doctor treating mental illness",
+    "kannadaMeaning": "ಮನೋವೈದ್ಯ",
+    "category": "Science"
+  },
+  {
+    "word": "Archaeology",
+    "meaning": "Study of ancient civilizations",
+    "kannadaMeaning": "ಪುರಾತತ್ವಶಾಸ್ತ್ರ",
+    "category": "Social Science"
+  },
+  {
+    "word": "Entrepreneur",
+    "meaning": "Person who starts a business",
+    "kannadaMeaning": "ಉದ್ಯಮಿ",
+    "category": "commerce"
+  },
+  {
+    "word": "Bureaucracy",
+    "meaning": "System of government administration",
+    "kannadaMeaning": "ನೌಕರಶಾಹಿ",
+    "category": "Social Science"
+  },
+  {
+    "word": "Constitutional",
+    "meaning": "Related to constitution",
+    "kannadaMeaning": "ಸಂವಿಧಾನಾತ್ಮಕ",
+    "category": "Social Science"
+  },
+  {
+    "word": "Pharmaceutical",
+    "meaning": "Related to medicinal drugs",
+    "kannadaMeaning": "ಔಷಧೀಯ",
+    "category": "Science"
+  },
+  {
+    "word": "Biotechnology",
+    "meaning": "Technology using living systems",
+    "kannadaMeaning": "ಜೈವ ತಂತ್ರಜ್ಞಾನ",
+    "category": "Biology"
+  },
+  {
+    "word": "Electromagnetic",
+    "meaning": "Related to electricity and magnetism",
+    "kannadaMeaning": "ವಿದ್ಯುತ್‌ಚುಂಬಕೀಯ",
+    "category": "Physics"
+  },
+  {
+    "word": "Thermodynamics",
+    "meaning": "Study of heat and energy",
+    "kannadaMeaning": "ಉಷ್ಮಾಗತಶಾಸ್ತ್ರ",
+    "category": "Physics"
+  },
+  {
+    "word": "Photosynthesis",
+    "meaning": "Plants making food using sunlight",
+    "kannadaMeaning": "ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆ",
+    "category": "Biology"
+  },
+  {
+    "word": "Microorganism",
+    "meaning": "Very tiny living organism",
+    "kannadaMeaning": "ಸೂಕ್ಷ್ಮಜೀವಿ",
+    "category": "Biology"
+  },
+  {
+    "word": "Respiratory",
+    "meaning": "Related to breathing",
+    "kannadaMeaning": "ಉಸಿರಾಟ ಸಂಬಂಧಿತ",
+    "category": "Biology"
+  },
+  {
+    "word": "Cardiovascular",
+    "meaning": "Related to heart and blood vessels",
+    "kannadaMeaning": "ಹೃದಯರಕ್ತಸಂಚಾರ",
+    "category": "biology"
+  },
+  {
+    "word": "Hydroelectricity",
+    "meaning": "Electricity generated using water",
+    "kannadaMeaning": "ಜಲವಿದ್ಯುತ್",
+    "category": "Physics"
+  },
+  {
+    "word": "Electrolysis",
+    "meaning": "Chemical breakdown using electricity",
+    "kannadaMeaning": "ವಿದ್ಯುದ್ಘಟನ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Crystallization",
+    "meaning": "Formation of crystals",
+    "kannadaMeaning": "ಸ್ಫಟಿಕೀಕರಣ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Polymerization",
+    "meaning": "Formation of polymers",
+    "kannadaMeaning": "ಪಾಲಿಮರೀಕರಣ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Differentiation",
+    "meaning": "Finding derivatives in mathematics",
+    "kannadaMeaning": "ಅವಕಲನ",
+    "category": "Math"
+  },
+  {
+    "word": "Trigonometry",
+    "meaning": "Study of triangles and angles",
+    "kannadaMeaning": "ತ್ರಿಕೋನಮಿತಿ",
+    "category": "Math"
+  },
+  {
+    "word": "Simultaneously",
+    "meaning": "Occurring at the same time",
+    "kannadaMeaning": "ಏಕಕಾಲದಲ್ಲಿ",
+    "category": "English"
+  },
+  {
+    "word": "Approximation",
+    "meaning": "Close estimate of value",
+    "kannadaMeaning": "ಅಂದಾಜು",
+    "category": "Math"
+  },
+  {
+    "word": "Administration",
+    "meaning": "Managing operations and activities",
+    "kannadaMeaning": "ನಿರ್ವಹಣೆ",
+    "category": "General"
+  },
+  {
+    "word": "Infrastructure",
+    "meaning": "Basic systems and facilities",
+    "kannadaMeaning": "ಮೂಲಸೌಕರ್ಯ",
+    "category": "General"
+  },
+  {
+    "word": "Communication",
+    "meaning": "Sharing information",
+    "kannadaMeaning": "ಸಂವಹನ",
+    "category": "General"
+  },
+  {
+    "word": "Interpretation",
+    "meaning": "Explaining meaning",
+    "kannadaMeaning": "ವ್ಯಾಖ್ಯಾನ",
+    "category": "English"
+  },
+  {
+    "word": "Pronunciation",
+    "meaning": "Way of speaking a word",
+    "kannadaMeaning": "ಉಚ್ಚಾರಣೆ",
+    "category": "English"
+  },
+  {
+    "word": "Vocabulary",
+    "meaning": "Collection of known words",
+    "kannadaMeaning": "ಪದಸಂಪತ್ತು",
+    "category": "English"
+  },
+  {
+    "word": "Artificial Intelligence",
+    "meaning": "Machine simulation of human intelligence",
+    "kannadaMeaning": "ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Authentication",
+    "meaning": "Verifying identity",
+    "kannadaMeaning": "ಪ್ರಮಾಣೀಕರಣ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Cybersecurity",
+    "meaning": "Protection from digital attacks",
+    "kannadaMeaning": "ಸೈಬರ್ ಭದ್ರತೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Virtualization",
+    "meaning": "Creating virtual versions of systems",
+    "kannadaMeaning": "ವರ್ಚುವಲೈಸೇಶನ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Microprocessor",
+    "meaning": "Processor chip in computers",
+    "kannadaMeaning": "ಮೈಕ್ರೋಪ್ರೊಸೆಸರ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Entrepreneurial",
+    "meaning": "Related to starting businesses",
+    "kannadaMeaning": "ಉದ್ಯಮಶೀಲ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Accountability",
+    "meaning": "Being responsible for actions",
+    "kannadaMeaning": "ಹೊಣೆಗಾರಿಕೆ",
+    "category": "General"
+  },
+  {
+    "word": "Acknowledgement",
+    "meaning": "Recognition of something",
+    "kannadaMeaning": "ಸ್ವೀಕೃತಿ",
+    "category": "General"
+  },
+  {
+    "word": "Coordination",
+    "meaning": "Organizing activities properly",
+    "kannadaMeaning": "ಸಮನ್ವಯ",
+    "category": "General"
+  },
+  {
+    "word": "Implementation",
+    "meaning": "Putting plans into action",
+    "kannadaMeaning": "ಅಮಲಿ",
+    "category": "General"
+  },
+  {
+    "word": "Agriculture",
+    "meaning": "Practice of farming and cultivation",
+    "kannadaMeaning": "ಕೃಷಿ",
+    "category": "General"
+  },
+  {
+    "word": "Irrigation",
+    "meaning": "Supplying water to crops",
+    "kannadaMeaning": "ನೀರಾವರಿ",
+    "category": "Agriculture"
+  },
+  {
+    "word": "Fertilizer",
+    "meaning": "Substance added to soil for plant growth",
+    "kannadaMeaning": "ರಸಗೊಬ್ಬರ",
+    "category": "Agriculture"
+  },
+  {
+    "word": "Pesticide",
+    "meaning": "Chemical used to kill pests",
+    "kannadaMeaning": "ಕೀಟನಾಶಕ",
+    "category": "Agriculture"
+  },
+  {
+    "word": "Harvesting",
+    "meaning": "Cutting and collecting crops",
+    "kannadaMeaning": "ಬೆಳೆ ಕೊಯ್ಲು",
+    "category": "Agriculture"
+  },
+  {
+    "word": "Cultivation",
+    "meaning": "Preparation and use of land for crops",
+    "kannadaMeaning": "ಬೆಳೆಗಾರಿಕೆ",
+    "category": "Agriculture"
+  },
+  {
+    "word": "Livestock",
+    "meaning": "Farm animals raised for use",
+    "kannadaMeaning": "ಪಶುಸಂಪತ್ತು",
+    "category": "Agriculture"
+  },
+  {
+    "word": "Dairy Farming",
+    "meaning": "Raising animals for milk production",
+    "kannadaMeaning": "ಹಾಲುಗಾರಿಕೆ",
+    "category": "Agriculture"
+  },
+  {
+    "word": "Veterinary",
+    "meaning": "Related to animal treatment",
+    "kannadaMeaning": "ಪಶುವೈದ್ಯಕೀಯ",
+    "category": "Biology"
+  },
+  {
+    "word": "Reservoir",
+    "meaning": "Large storage area for water",
+    "kannadaMeaning": "ಜಲಾಶಯ",
+    "category": "Science"
+  },
+  {
+    "word": "Electricity",
+    "meaning": "Form of energy from electric charge",
+    "kannadaMeaning": "ವಿದ್ಯುತ್",
+    "category": "Physics"
+  },
+  {
+    "word": "Transformer",
+    "meaning": "Device used to change voltage",
+    "kannadaMeaning": "ಟ್ರಾನ್ಸ್‌ಫಾರ್ಮರ್",
+    "category": "Physics"
+  },
+  {
+    "word": "Generator",
+    "meaning": "Machine that produces electricity",
+    "kannadaMeaning": "ವಿದ್ಯುತ್ ಉತ್ಪಾದಕ",
+    "category": "Physics"
+  },
+  {
+    "word": "Transmission",
+    "meaning": "Sending electricity or signals",
+    "kannadaMeaning": "ಸಂಚರಣೆ",
+    "category": "Physics"
+  },
+  {
+    "word": "Communication",
+    "meaning": "Sharing information with others",
+    "kannadaMeaning": "ಸಂವಹನ",
+    "category": "English"
+  },
+  {
+    "word": "Pronunciation",
+    "meaning": "Way of speaking words",
+    "kannadaMeaning": "ಉಚ್ಚಾರಣೆ",
+    "category": "English"
+  },
+  {
+    "word": "Vocabulary",
+    "meaning": "Collection of known words",
+    "kannadaMeaning": "ಪದಸಂಪತ್ತು",
+    "category": "English"
+  },
+  {
+    "word": "Transportation",
+    "meaning": "Movement of people or goods",
+    "kannadaMeaning": "ಸಾರಿಗೆ",
+    "category": "General"
+  },
+  {
+    "word": "Infrastructure",
+    "meaning": "Basic facilities and systems",
+    "kannadaMeaning": "ಮೂಲಸೌಕರ್ಯ",
+    "category": "General"
+  },
+  {
+    "word": "Entrepreneur",
+    "meaning": "Person who starts a business",
+    "kannadaMeaning": "ಉದ್ಯಮಿ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Investment",
+    "meaning": "Using money to earn profit",
+    "kannadaMeaning": "ಹೂಡಿಕೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Banking",
+    "meaning": "Managing money and transactions",
+    "kannadaMeaning": "ಬ್ಯಾಂಕಿಂಗ್",
+    "category": "Commerce"
+  },
+  {
+    "word": "Insurance",
+    "meaning": "Financial protection system",
+    "kannadaMeaning": "ವಿಮೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Subsidy",
+    "meaning": "Financial support from government",
+    "kannadaMeaning": "ಅನುದಾನ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Scholarship",
+    "meaning": "Financial aid for education",
+    "kannadaMeaning": "ವಿದ್ಯಾರ್ಥಿವೇತನ",
+    "category": "Education"
+  },
+  {
+    "word": "Examination",
+    "meaning": "Test to measure knowledge",
+    "kannadaMeaning": "ಪರೀಕ್ಷೆ",
+    "category": "Education"
+  },
+  {
+    "word": "Application",
+    "meaning": "Formal request for something",
+    "kannadaMeaning": "ಅರ್ಜಿಸಲ್ಲಿಕೆ",
+    "category": "Education"
+  },
+  {
+    "word": "Certificate",
+    "meaning": "Official document proving achievement",
+    "kannadaMeaning": "ಪ್ರಮಾಣಪತ್ರ",
+    "category": "Education"
+  },
+  {
+    "word": "Biodiversity",
+    "meaning": "Variety of living organisms",
+    "kannadaMeaning": "ಜೈವ ವೈವಿಧ್ಯತೆ",
+    "category": "Science"
+  },
+  {
+    "word": "Conservation",
+    "meaning": "Protection of natural resources",
+    "kannadaMeaning": "ಸಂರಕ್ಷಣೆ",
+    "category": "Science"
+  },
+  {
+    "word": "Environment",
+    "meaning": "Surrounding natural world",
+    "kannadaMeaning": "ಪರಿಸರ",
+    "category": "Science"
+  },
+  {
+    "word": "Deforestation",
+    "meaning": "Cutting down forests",
+    "kannadaMeaning": "ಅರಣ್ಯನಾಶ",
+    "category": "Science"
+  },
+  {
+    "word": "Afforestation",
+    "meaning": "Planting trees in empty land",
+    "kannadaMeaning": "ಅರಣ್ಯೀಕರಣ",
+    "category": "Science"
+  },
+  {
+    "word": "Technology",
+    "meaning": "Use of scientific knowledge",
+    "kannadaMeaning": "ತಂತ್ರಜ್ಞಾನ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Database",
+    "meaning": "Collection of organized data",
+    "kannadaMeaning": "ದತ್ತಸಂಗ್ರಹ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Programming",
+    "meaning": "Writing computer instructions",
+    "kannadaMeaning": "ಕಾರ್ಯಕ್ರಮ ರಚನೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Cybersecurity",
+    "meaning": "Protection from online threats",
+    "kannadaMeaning": "ಸೈಬರ್ ಭದ್ರತೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Artificial Intelligence",
+    "meaning": "Machine simulation of human thinking",
+    "kannadaMeaning": "ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Globalization",
+    "meaning": "Worldwide connection and interaction",
+    "kannadaMeaning": "ಜಾಗತೀಕರಣ",
+    "category": "Social Science"
+  },
+  {
+    "word": "Urbanization",
+    "meaning": "Growth of cities",
+    "kannadaMeaning": "ನಗರೀಕರಣ",
+    "category": "Social Science"
+  }
+,
+  {
+    "word": "Electromagnetism",
+    "meaning": "Interaction between electricity and magnetism",
+    "kannadaMeaning": "ವಿದ್ಯುತ್‌ಚುಂಬಕತ್ವ",
+    "category": "Physics"
+  },
+  {
+    "word": "Thermodynamics",
+    "meaning": "Study of heat and energy transfer",
+    "kannadaMeaning": "ಉಷ್ಮಾಗತಶಾಸ್ತ್ರ",
+    "category": "Physics"
+  },
+  {
+    "word": "Semiconductor",
+    "meaning": "Material partially conducting electricity",
+    "kannadaMeaning": "ಅರ್ಧವಾಹಕ",
+    "category": "Physics"
+  },
+  {
+    "word": "Electrostatics",
+    "meaning": "Study of stationary electric charges",
+    "kannadaMeaning": "ಸ್ಥಿರವಿದ್ಯುತ್ ಶಾಸ್ತ್ರ",
+    "category": "Physics"
+  },
+  {
+    "word": "Superconductivity",
+    "meaning": "Zero resistance flow of electricity",
+    "kannadaMeaning": "ಅತಿವಾಹಕತೆ",
+    "category": "Physics"
+  },
+  {
+    "word": "Radioactivity",
+    "meaning": "Emission of radiation from atoms",
+    "kannadaMeaning": "ಕಿರಣೋತ್ಸರ್ಗ",
+    "category": "Physics"
+  },
+  {
+    "word": "Photosynthesis",
+    "meaning": "Process by which plants prepare food",
+    "kannadaMeaning": "ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆ",
+    "category": "Biology"
+  },
+  {
+    "word": "Microorganism",
+    "meaning": "Tiny living organism",
+    "kannadaMeaning": "ಸೂಕ್ಷ್ಮಜೀವಿ",
+    "category": "Biology"
+  },
+  {
+    "word": "Biotechnology",
+    "meaning": "Use of living systems in technology",
+    "kannadaMeaning": "ಜೈವ ತಂತ್ರಜ್ಞಾನ",
+    "category": "Biology"
+  },
+  {
+    "word": "Cardiovascular",
+    "meaning": "Related to heart and blood vessels",
+    "kannadaMeaning": "ಹೃದಯರಕ್ತಸಂಚಾರ",
+    "category": "Biology"
+  },
+  {
+    "word": "Respiratory",
+    "meaning": "Related to breathing",
+    "kannadaMeaning": "ಉಸಿರಾಟ ಸಂಬಂಧಿತ",
+    "category": "Biology"
+  },
+  {
+    "word": "Reproduction",
+    "meaning": "Process of producing offspring",
+    "kannadaMeaning": "ಪ್ರಜನನ",
+    "category": "Biology"
+  },
+  {
+    "word": "Classification",
+    "meaning": "Grouping based on similarities",
+    "kannadaMeaning": "ವರ್ಗೀಕರಣ",
+    "category": "Biology"
+  },
+  {
+    "word": "Biodiversity",
+    "meaning": "Variety of living organisms",
+    "kannadaMeaning": "ಜೈವ ವೈವಿಧ್ಯತೆ",
+    "category": "Biology"
+  },
+  {
+    "word": "Neutralization",
+    "meaning": "Reaction between acid and base",
+    "kannadaMeaning": "ತಟಸ್ಥೀಕರಣ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Polymerization",
+    "meaning": "Formation of polymers",
+    "kannadaMeaning": "ಪಾಲಿಮರೀಕರಣ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Crystallization",
+    "meaning": "Formation of crystals",
+    "kannadaMeaning": "ಸ್ಫಟಿಕೀಕರಣ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Electrolysis",
+    "meaning": "Chemical decomposition using electricity",
+    "kannadaMeaning": "ವಿದ್ಯುದ್ಘಟನ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Hydrocarbon",
+    "meaning": "Compound of hydrogen and carbon",
+    "kannadaMeaning": "ಹೈಡ್ರೋಕಾರ್ಬನ್",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Biodegradable",
+    "meaning": "Able to decay naturally",
+    "kannadaMeaning": "ಜೈವಿಕವಾಗಿ ಕರಗುವ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Nonbiodegradable",
+    "meaning": "Unable to decay naturally",
+    "kannadaMeaning": "ಜೈವಿಕವಾಗಿ ಕರಗದ",
+    "category": "Chemistry"
+  },
+  {
+    "word": "Trigonometry",
+    "meaning": "Study of triangles and angles",
+    "kannadaMeaning": "ತ್ರಿಕೋನಮಿತಿ",
+    "category": "Math"
+  },
+  {
+    "word": "Differentiation",
+    "meaning": "Process of finding derivatives",
+    "kannadaMeaning": "ಅವಕಲನ",
+    "category": "Math"
+  },
+  {
+    "word": "Integration",
+    "meaning": "Mathematical process opposite of differentiation",
+    "kannadaMeaning": "ಸಮಾಕಲನ",
+    "category": "Math"
+  },
+  {
+    "word": "Approximation",
+    "meaning": "Value close to exact answer",
+    "kannadaMeaning": "ಅಂದಾಜು",
+    "category": "Math"
+  },
+  {
+    "word": "Simultaneous Equation",
+    "meaning": "Equations solved together",
+    "kannadaMeaning": "ಏಕಕಾಲೀನ ಸಮೀಕರಣ",
+    "category": "Math"
+  },
+  {
+    "word": "Perpendicular",
+    "meaning": "Meeting at right angle",
+    "kannadaMeaning": "ಲಂಬ",
+    "category": "Math"
+  },
+  {
+    "word": "Infrastructure",
+    "meaning": "Basic systems and facilities",
+    "kannadaMeaning": "ಮೂಲಸೌಕರ್ಯ",
+    "category": "General"
+  },
+  {
+    "word": "Entrepreneurship",
+    "meaning": "Skill of starting businesses",
+    "kannadaMeaning": "ಉದ್ಯಮಶೀಲತೆ",
+    "category": "Commerce"
+  },
+  {
+    "word": "Administration",
+    "meaning": "Managing activities and systems",
+    "kannadaMeaning": "ನಿರ್ವಹಣೆ",
+    "category": "General"
+  },
+  {
+    "word": "Implementation",
+    "meaning": "Putting plans into action",
+    "kannadaMeaning": "ಅಮಲಿ",
+    "category": "General"
+  },
+  {
+    "word": "Communication",
+    "meaning": "Exchange of information",
+    "kannadaMeaning": "ಸಂವಹನ",
+    "category": "English"
+  },
+  {
+    "word": "Pronunciation",
+    "meaning": "Way words are spoken",
+    "kannadaMeaning": "ಉಚ್ಚಾರಣೆ",
+    "category": "English"
+  },
+  {
+    "word": "Interpretation",
+    "meaning": "Explanation of meaning",
+    "kannadaMeaning": "ವ್ಯಾಖ್ಯಾನ",
+    "category": "English"
+  },
+  {
+    "word": "Comprehension",
+    "meaning": "Ability to understand",
+    "kannadaMeaning": "ಅರ್ಥಗ್ರಹಣ",
+    "category": "English"
+  },
+  {
+    "word": "Artificial Intelligence",
+    "meaning": "Machine-based human intelligence simulation",
+    "kannadaMeaning": "ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Authentication",
+    "meaning": "Verification of identity",
+    "kannadaMeaning": "ಪ್ರಮಾಣೀಕರಣ",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Virtualization",
+    "meaning": "Creation of virtual systems",
+    "kannadaMeaning": "ವರ್ಚುವಲೈಸೇಶನ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Microprocessor",
+    "meaning": "Central processing chip",
+    "kannadaMeaning": "ಮೈಕ್ರೋಪ್ರೊಸೆಸರ್",
+    "category": "Computer Science"
+  },
+  {
+    "word": "Cybersecurity",
+    "meaning": "Protection against cyber attacks",
+    "kannadaMeaning": "ಸೈಬರ್ ಭದ್ರತೆ",
+    "category": "Computer Science"
+  }
+
+]
 
 

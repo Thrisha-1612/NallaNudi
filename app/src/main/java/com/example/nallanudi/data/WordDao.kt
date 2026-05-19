@@ -21,8 +21,15 @@ interface WordDao {
     @Query("SELECT * FROM words WHERE word = :word LIMIT 1")
     suspend fun getWord(word: String): WordEntity?
 
-    // 🔹 Search words
-    @Query("SELECT * FROM words WHERE word LIKE '%' || :query || '%'")
+    // 🔹 Smart search
+    @Query("""
+        SELECT * FROM words
+        WHERE word LIKE '%' || :query || '%'
+        OR meaning LIKE '%' || :query || '%'
+        OR kannadaMeaning LIKE '%' || :query || '%'
+        OR category LIKE '%' || :query || '%'
+        ORDER BY word ASC
+    """)
     fun searchWords(query: String): Flow<List<WordEntity>>
 
     // 🔹 Filter by category
